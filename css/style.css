@@ -229,7 +229,10 @@ a {
         color: #84223b8a; }
 
 
-        
+  td {
+    height: 50px;
+    vertical-align: top;
+  }       
 
 
 
