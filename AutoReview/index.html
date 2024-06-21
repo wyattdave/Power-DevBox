@@ -4,11 +4,13 @@
 		<meta charset="utf-8">
 		<title>AutoReview</title>
 		<meta name="viewport" content="width=device-width">
+		<link rel="manifest" href="manifest.json">
+		<link rel="icon" type="image/x-icon" href="/Auto-Review/AutoReview-web/icon v2 128.png">
 		<link href="assets/css/mui.min-ar.css" rel="stylesheet" />
 		<link href="assets/fontawsome/css/fontawesome.css" rel="stylesheet" />
 		<link href="assets/fontawsome/css/solid.min.css" rel="stylesheet" />
 		<link href="assets/css/style-ar.css" rel="stylesheet" />
-		<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+		<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
 		<link href="https://fonts.googleapis.com/css?family=Maven+Pro|Muli|Droid+Sans+Mono|Istok+Web" rel="stylesheet"	type="text/css">
 	</head>
 	<body>		
@@ -38,7 +40,7 @@
 					<div class="mui-divider"></div>
 					<div id="solution-title" style="display: none;"><i class="fa-solid fa-box-archive"></i>Solution Contents</div>
 					<ol id="solution-container" style="display: none;"></ol>
-					<span style="display:block" id="version"><img src="assets/img/mealcorp.PNG" style="height:20px"/> v2.3.9</span>	
+					<span style="display:block" id="version"><img src="assets/img/mealcorp.PNG" style="height:20px"/> v2.4.2</span>	
 					<div class="mui-divider" id="solution-divider"></div>
 					<p id="loading"></p>
 					<div id="csvDropdown" class ="padding" style="display: none;">
@@ -60,6 +62,11 @@
 		<script type="text/javascript" src="assets/js/zip.min.js"></script>
 		<script type="text/javascript" src="assets/js/script.js"></script>
 		<script type="text/javascript" src="assets/js/mui.min.js"></script>
+		<script>
+			if('serviceWorker' in navigator) {
+			  navigator.serviceWorker.register('service worker.js', { scope: '/Auto-Review/AutoReview-web/' });
+			}
+			</script>
 
 	</body>
 </html>
