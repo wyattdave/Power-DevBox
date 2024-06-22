@@ -31,31 +31,5 @@
     "categories": [
       "productivity",
       "utilities"
-    ],
-    "screenshots" : [
-      {
-        "src": "assets/img/autoreview webapp.PNG",
-        "sizes": "1280x800",
-        "type": "image/jpg",
-        "platform": "wide"
-      },
-      {
-        "src": "assets/img/autoreview (1).PNG",
-        "sizes": "1280x800",
-        "type": "image/jpg",
-        "platform": "wide"
-      },
-      {
-        "src": "assets/img/autoreview (2).PNG",
-        "sizes": "1280x800",
-        "type": "image/jpg",
-        "platform": "wide"
-      },
-      {
-        "src": "assets/img/autoreview (3).PNG",
-        "sizes": "1280x800",
-        "type": "image/jpg",
-        "platform": "wide"
-      }
     ]
   }
