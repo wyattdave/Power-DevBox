@@ -1,0 +1,580 @@
+swagger: '2.0'
+info:
+  title: AutoReview
+  description: >-
+    Auto Code Review your Power Automate flows. Use My flow action or Dataverse
+    workflows table (must json the clientData field). Export either raw json or
+    following export files:
+
+
+    Review - Code Review of flow, with score, errors and warnings
+
+    Report - All variables, actions and connections
+
+    Diagram - Visual representation of the flow
+  version: '1.0'
+host: api.powerdevbox.com
+basePath: /v1/autoreview
+schemes:
+  - https
+consumes: []
+produces: []
+paths:
+  /:
+    get:
+      responses:
+        default:
+          description: default
+          schema:
+            type: object
+            properties:
+              version:
+                type: string
+                description: version
+              apiKey:
+                type: string
+                description: apiKey
+              message:
+                type: string
+                description: message
+              information:
+                type: string
+                description: information
+              diagram:
+                type: string
+                description: diagram
+      summary: Info
+      description: Latest information about AutoReview
+      operationId: GET-info
+      parameters: []
+    post:
+      responses:
+        default:
+          description: default
+          schema:
+            type: object
+            properties:
+              data:
+                type: object
+                properties:
+                  name:
+                    type: string
+                    description: name
+                  id:
+                    type: string
+                    description: id
+                  environment:
+                    type: string
+                    description: environment
+                  owner:
+                    type: string
+                    description: owner
+                  trigger:
+                    type: string
+                    description: trigger
+                  triggerParam:
+                    type: string
+                    description: triggerParam
+                  triggerData:
+                    type: string
+                    description: triggerData
+                  triggerConfig:
+                    type: string
+                    description: triggerConfig
+                  triggerExpress:
+                    type: string
+                    description: triggerExpress
+                  triggerInputs:
+                    type: string
+                    description: triggerInputs
+                  triggerRecur:
+                    type: string
+                    description: triggerRecur
+                  premium:
+                    type: boolean
+                    description: premium
+                  connectionRefs:
+                    type: integer
+                    format: int32
+                    description: connectionRefs
+                  connectors:
+                    type: integer
+                    format: int32
+                    description: connectors
+                  steps:
+                    type: integer
+                    format: int32
+                    description: steps
+                  variables:
+                    type: integer
+                    format: int32
+                    description: variables
+                  complexity:
+                    type: integer
+                    format: int32
+                    description: complexity
+                  varNaming:
+                    type: boolean
+                    description: varNaming
+                  varNameConsts:
+                    type: boolean
+                    description: varNameConsts
+                  varNameUse:
+                    type: boolean
+                    description: varNameUse
+                  composes:
+                    type: integer
+                    format: int32
+                    description: composes
+                  exception:
+                    type: integer
+                    format: int32
+                    description: exception
+                  exceptionHandleScope:
+                    type: boolean
+                    description: exceptionHandleScope
+                  exceptionScope:
+                    type: boolean
+                    description: exceptionScope
+                  exceptionTerminate:
+                    type: boolean
+                    description: exceptionTerminate
+                  exceptionLink:
+                    type: boolean
+                    description: exceptionLink
+                  mainScope:
+                    type: boolean
+                    description: mainScope
+                  variableArray:
+                    type: array
+                    items: {}
+                    description: variableArray
+                  actionArray:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        name:
+                          type: string
+                          description: name
+                        step:
+                          type: string
+                          description: step
+                        type:
+                          type: string
+                          description: type
+                        id:
+                          type: string
+                          description: id
+                        hashId:
+                          type: string
+                          description: hashId
+                        tier:
+                          type: string
+                          description: tier
+                        connector:
+                          type: string
+                          description: connector
+                        imgURL:
+                          type: string
+                          description: imgURL
+                        runAfter:
+                          type: string
+                          description: runAfter
+                        exception:
+                          type: string
+                          description: exception
+                        index:
+                          type: integer
+                          format: int32
+                          description: index
+                        complexity:
+                          type: integer
+                          format: int32
+                          description: complexity
+                        detail:
+                          type: string
+                          description: detail
+                        filter:
+                          type: string
+                          description: filter
+                        pagination:
+                          type: string
+                          description: pagination
+                        secure:
+                          type: string
+                          description: secure
+                        retry:
+                          type: string
+                          description: retry
+                        timeout:
+                          type: string
+                          description: timeout
+                        position:
+                          type: string
+                          description: position
+                        positionInfo:
+                          type: string
+                          description: positionInfo
+                        environmentVariables:
+                          type: string
+                          description: environmentVariables
+                        environmentB:
+                          type: boolean
+                          description: environmentB
+                        notes:
+                          type: string
+                          description: notes
+                        parent:
+                          type: string
+                          description: parent
+                        branch:
+                          type: string
+                          description: branch
+                        positionIndex:
+                          type: string
+                          description: positionIndex
+                        positionType:
+                          type: string
+                          description: positionType
+                        nested:
+                          type: string
+                          description: nested
+                    description: actionArray
+                  apiActionArray:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        name:
+                          type: string
+                          description: name
+                        step:
+                          type: string
+                          description: step
+                        type:
+                          type: string
+                          description: type
+                        id:
+                          type: string
+                          description: id
+                        hashId:
+                          type: string
+                          description: hashId
+                        tier:
+                          type: string
+                          description: tier
+                        connector:
+                          type: string
+                          description: connector
+                        imgURL:
+                          type: string
+                          description: imgURL
+                        runAfter:
+                          type: string
+                          description: runAfter
+                        exception:
+                          type: string
+                          description: exception
+                        index:
+                          type: integer
+                          format: int32
+                          description: index
+                        complexity:
+                          type: integer
+                          format: int32
+                          description: complexity
+                        detail:
+                          type: string
+                          description: detail
+                        filter:
+                          type: string
+                          description: filter
+                        pagination:
+                          type: string
+                          description: pagination
+                        secure:
+                          type: string
+                          description: secure
+                        retry:
+                          type: string
+                          description: retry
+                        timeout:
+                          type: string
+                          description: timeout
+                        position:
+                          type: string
+                          description: position
+                        positionInfo:
+                          type: string
+                          description: positionInfo
+                        environmentVariables:
+                          type: string
+                          description: environmentVariables
+                        environmentB:
+                          type: boolean
+                          description: environmentB
+                        notes:
+                          type: string
+                          description: notes
+                        parent:
+                          type: string
+                          description: parent
+                        branch:
+                          type: string
+                          description: branch
+                        positionIndex:
+                          type: string
+                          description: positionIndex
+                        positionType:
+                          type: string
+                          description: positionType
+                        nested:
+                          type: string
+                          description: nested
+                    description: apiActionArray
+                  exceptionArray:
+                    type: array
+                    items: {}
+                    description: exceptionArray
+                  connectionArray:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        conName:
+                          type: string
+                          description: conName
+                        appId:
+                          type: string
+                          description: appId
+                        opId:
+                          type: string
+                          description: opId
+                        count:
+                          type: integer
+                          format: int32
+                          description: count
+                    description: connectionArray
+                  error:
+                    type: string
+                    description: error
+                  actionObjectArray:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        step:
+                          type: string
+                          description: step
+                        connector:
+                          type: string
+                          description: connector
+                        name:
+                          type: string
+                          description: name
+                        id:
+                          type: string
+                          description: id
+                        hashId:
+                          type: string
+                          description: hashId
+                        object:
+                          type: string
+                          description: object
+                        type:
+                          type: string
+                          description: type
+                        index:
+                          type: integer
+                          format: int32
+                          description: index
+                        parent:
+                          type: string
+                          description: parent
+                    description: actionObjectArray
+                description: data
+      summary: JSON
+      description: Returns raw AutoReview data as a json
+      operationId: POST-json
+      parameters:
+        - name: body
+          in: body
+          required: true
+          schema:
+            type: object
+            properties:
+              configs:
+                type: object
+                properties:
+                  naming:
+                    type: object
+                    x-ms-visibility: advanced
+                    properties: {}
+                    description: Configure your own naming convention
+                  complexity:
+                    type: array
+                    x-ms-visibility: advanced
+                    items:
+                      description: Configure your own complexity scores
+                      title: Complexity
+                      type: string
+                    description: Configure your own complexity scores
+                  ratings:
+                    type: object
+                    x-ms-visibility: advanced
+                    properties: {}
+                    description: Set fail limit for each section
+                  scoring:
+                    type: array
+                    x-ms-visibility: advanced
+                    items:
+                      description: Configure your own points per section
+                      title: Scores
+                      type: string
+                    description: Configure your own scoring
+                  type:
+                    type: string
+                    description: type of return
+                    title: ''
+                    default: json
+                    x-ms-visibility: internal
+                description: configs
+                required:
+                  - type
+              properties:
+                type: object
+                properties:
+                  displayName:
+                    type: string
+                    description: Name of flow
+                    title: Display Name
+                  name:
+                    type: string
+                    description: Unique identifier (also shown as name/resourceid)
+                    title: Flow ID
+                  owner:
+                    type: string
+                    description: Flow owner
+                    title: Owner
+                  environment:
+                    type: string
+                    description: Flow environment
+                    title: Environment
+                  definition:
+                    type: object
+                    title: Definition
+                    properties: {}
+                    description: Definition
+                description: properties
+                required:
+                  - displayName
+                  - environment
+                  - owner
+                  - name
+                  - definition
+            required:
+              - properties
+              - configs
+  /file:
+    post:
+      responses:
+        default:
+          description: default
+          schema: {}
+      summary: Files
+      description: Returns generated files
+      operationId: POST-file
+      parameters:
+        - name: body
+          in: body
+          required: false
+          schema:
+            type: object
+            properties:
+              configs:
+                type: object
+                properties:
+                  naming:
+                    type: object
+                    x-ms-visibility: advanced
+                    properties: {}
+                    description: Configure your own naming convention
+                  complexity:
+                    type: array
+                    x-ms-visibility: advanced
+                    items:
+                      description: Configure your own complexity scores
+                      title: Complexity
+                      type: string
+                    description: Configure your own complexity scores
+                  ratings:
+                    type: object
+                    x-ms-visibility: advanced
+                    properties: {}
+                    description: Set fail limit for each section
+                  scoring:
+                    type: array
+                    x-ms-visibility: advanced
+                    items:
+                      description: Configure your own points per section
+                      title: Scores
+                      type: string
+                    description: Configure your own scoring
+                  type:
+                    type: string
+                    description: Type of file to return
+                    title: Type
+                    default: review
+                    x-ms-visibility: important
+                    enum:
+                      - review
+                      - report
+                      - diagram
+                description: configs
+                required:
+                  - type
+              properties:
+                type: object
+                properties:
+                  displayName:
+                    type: string
+                    description: Name of flow
+                    title: Display Name
+                  name:
+                    type: string
+                    description: Unique identifier (also shown as name/resourceid)
+                    title: Flow ID
+                  owner:
+                    type: string
+                    description: Flow owner
+                    title: Owner
+                  environment:
+                    type: string
+                    description: Flow environment
+                    title: Environment
+                  definition:
+                    type: object
+                    title: Definition
+                    properties: {}
+                    description: Definition
+                description: properties
+                required:
+                  - displayName
+                  - environment
+                  - owner
+                  - name
+                  - definition
+            required:
+              - properties
+              - configs
+parameters: {}
+responses: {}
+securityDefinitions:
+  Key:
+    type: apiKey
+    in: header
+    name: apiKey
+security:
+  - Key: []
+tags: []

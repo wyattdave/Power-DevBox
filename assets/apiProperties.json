@@ -1,0 +1,48 @@
+{
+    "properties": {
+      "capabilities": [],
+      "connectionParameters": {
+        "api_key": {
+          "type": "securestring",
+          "uiDefinition": {
+            "constraints": {
+              "clearText": false,
+              "required": "true",
+              "tabIndex": 2
+            },
+            "description": "apiKey",
+            "displayName": "key",
+            "tooltip": "Provide your key"
+          }
+        }
+      },
+      "iconBrandColor": "#007ee5",
+      "scriptOperations": [
+          "getCall",
+          "postCall"
+      ],
+      "policyTemplateInstances": [
+      ]    
+    },
+    "publisher": "Power DevBox",
+    "stackOwner": "Power DevBox",
+    "contact": {
+      "name": "Power DevBox Support",
+      "url": "https://powerdevbox.com/contact.html",
+      "email": "info@powerdevbox.com"
+    },
+    "x-ms-connector-metadata": [
+      {
+        "propertyName": "Website",
+        "propertyValue": "https://powerdevbox.com/"
+      },
+      {
+        "propertyName": "Privacy policy",
+        "propertyValue": "https://powerdevbox.com/policy"
+      },
+      {
+        "propertyName": "Categories",
+        "propertyValue": "_____;_____"
+      }
+    ]
+  }
