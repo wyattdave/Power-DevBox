@@ -1,0 +1,759 @@
+swagger: '2.0'
+info:
+  title: AutoReview
+  description: >-
+    Auto Code Review your flows. Use My flow action or Dataverse workflows table
+    (must json the clientData field). Export either raw json or following export
+    files: Review - Code Review of flow, with score, errors and warnings Report
+    - All variables, actions and connections Diagram - Visual representation of
+    the flow
+  version: 1.0.0
+host: api.powerdevbox.com
+basePath: /v1/autoreview
+schemes:
+  - https
+consumes: []
+produces: []
+paths:
+  /:
+    get:
+      responses:
+        '200':
+          description: default
+          schema:
+            type: object
+            properties:
+              version:
+                type: string
+                description: version
+              next version:
+                type: string
+                description: next version
+              apiKey:
+                type: string
+                description: apiKey
+              messages:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    message:
+                      type: string
+                      description: message
+                    date:
+                      type: string
+                      description: date
+                description: messages
+      summary: Information
+      description: Latest information about AutoReview
+      operationId: Info
+      parameters: []
+    post:
+      responses:
+        '200':
+          description: default
+          schema:
+            type: object
+            properties:
+              data:
+                type: object
+                properties:
+                  name:
+                    type: string
+                    description: name
+                  id:
+                    type: string
+                    description: id
+                  environment:
+                    type: string
+                    description: environment
+                  owner:
+                    type: string
+                    description: owner
+                  trigger:
+                    type: string
+                    description: trigger
+                  triggerParam:
+                    type: string
+                    description: triggerParam
+                  triggerData:
+                    type: string
+                    description: triggerData
+                  triggerConfig:
+                    type: string
+                    description: triggerConfig
+                  triggerExpress:
+                    type: string
+                    description: triggerExpress
+                  triggerInputs:
+                    type: string
+                    description: triggerInputs
+                  triggerRecur:
+                    type: string
+                    description: triggerRecur
+                  premium:
+                    type: boolean
+                    description: premium
+                  connectionRefs:
+                    type: integer
+                    format: int32
+                    description: connectionRefs
+                  connectors:
+                    type: integer
+                    format: int32
+                    description: connectors
+                  steps:
+                    type: integer
+                    format: int32
+                    description: steps
+                  variables:
+                    type: integer
+                    format: int32
+                    description: variables
+                  complexity:
+                    type: integer
+                    format: int32
+                    description: complexity
+                  varNaming:
+                    type: boolean
+                    description: varNaming
+                  varNameConsts:
+                    type: boolean
+                    description: varNameConsts
+                  varNameUse:
+                    type: boolean
+                    description: varNameUse
+                  composes:
+                    type: integer
+                    format: int32
+                    description: composes
+                  exception:
+                    type: integer
+                    format: int32
+                    description: exception
+                  exceptionHandleScope:
+                    type: boolean
+                    description: exceptionHandleScope
+                  exceptionScope:
+                    type: boolean
+                    description: exceptionScope
+                  exceptionTerminate:
+                    type: boolean
+                    description: exceptionTerminate
+                  exceptionLink:
+                    type: boolean
+                    description: exceptionLink
+                  mainScope:
+                    type: boolean
+                    description: mainScope
+                  variableArray:
+                    type: array
+                    items: {}
+                    description: variableArray
+                  actionArray:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        name:
+                          type: string
+                          description: name
+                        step:
+                          type: string
+                          description: step
+                        type:
+                          type: string
+                          description: type
+                        id:
+                          type: string
+                          description: id
+                        hashId:
+                          type: string
+                          description: hashId
+                        tier:
+                          type: string
+                          description: tier
+                        connector:
+                          type: string
+                          description: connector
+                        imgURL:
+                          type: string
+                          description: imgURL
+                        runAfter:
+                          type: string
+                          description: runAfter
+                        exception:
+                          type: string
+                          description: exception
+                        index:
+                          type: integer
+                          format: int32
+                          description: index
+                        complexity:
+                          type: integer
+                          format: int32
+                          description: complexity
+                        detail:
+                          type: string
+                          description: detail
+                        filter:
+                          type: string
+                          description: filter
+                        pagination:
+                          type: string
+                          description: pagination
+                        secure:
+                          type: string
+                          description: secure
+                        retry:
+                          type: string
+                          description: retry
+                        timeout:
+                          type: string
+                          description: timeout
+                        position:
+                          type: string
+                          description: position
+                        positionInfo:
+                          type: string
+                          description: positionInfo
+                        environmentVariables:
+                          type: string
+                          description: environmentVariables
+                        environmentB:
+                          type: boolean
+                          description: environmentB
+                        notes:
+                          type: string
+                          description: notes
+                        parent:
+                          type: string
+                          description: parent
+                        branch:
+                          type: string
+                          description: branch
+                        positionIndex:
+                          type: string
+                          description: positionIndex
+                        positionType:
+                          type: string
+                          description: positionType
+                        nested:
+                          type: string
+                          description: nested
+                    description: actionArray
+                  apiActionArray:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        name:
+                          type: string
+                          description: name
+                        step:
+                          type: string
+                          description: step
+                        type:
+                          type: string
+                          description: type
+                        id:
+                          type: string
+                          description: id
+                        hashId:
+                          type: string
+                          description: hashId
+                        tier:
+                          type: string
+                          description: tier
+                        connector:
+                          type: string
+                          description: connector
+                        imgURL:
+                          type: string
+                          description: imgURL
+                        runAfter:
+                          type: string
+                          description: runAfter
+                        exception:
+                          type: string
+                          description: exception
+                        index:
+                          type: integer
+                          format: int32
+                          description: index
+                        complexity:
+                          type: integer
+                          format: int32
+                          description: complexity
+                        detail:
+                          type: string
+                          description: detail
+                        filter:
+                          type: string
+                          description: filter
+                        pagination:
+                          type: string
+                          description: pagination
+                        secure:
+                          type: string
+                          description: secure
+                        retry:
+                          type: string
+                          description: retry
+                        timeout:
+                          type: string
+                          description: timeout
+                        position:
+                          type: string
+                          description: position
+                        positionInfo:
+                          type: string
+                          description: positionInfo
+                        environmentVariables:
+                          type: string
+                          description: environmentVariables
+                        environmentB:
+                          type: boolean
+                          description: environmentB
+                        notes:
+                          type: string
+                          description: notes
+                        parent:
+                          type: string
+                          description: parent
+                        branch:
+                          type: string
+                          description: branch
+                        positionIndex:
+                          type: string
+                          description: positionIndex
+                        positionType:
+                          type: string
+                          description: positionType
+                        nested:
+                          type: string
+                          description: nested
+                    description: apiActionArray
+                  exceptionArray:
+                    type: array
+                    items: {}
+                    description: exceptionArray
+                  connectionArray:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        conName:
+                          type: string
+                          description: conName
+                        appId:
+                          type: string
+                          description: appId
+                        opId:
+                          type: string
+                          description: opId
+                        count:
+                          type: integer
+                          format: int32
+                          description: count
+                    description: connectionArray
+                  error:
+                    type: string
+                    description: error
+                  actionObjectArray:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        step:
+                          type: string
+                          description: step
+                        connector:
+                          type: string
+                          description: connector
+                        name:
+                          type: string
+                          description: name
+                        id:
+                          type: string
+                          description: id
+                        hashId:
+                          type: string
+                          description: hashId
+                        object:
+                          type: string
+                          description: object
+                        type:
+                          type: string
+                          description: type
+                        index:
+                          type: integer
+                          format: int32
+                          description: index
+                        parent:
+                          type: string
+                          description: parent
+                    description: actionObjectArray
+                description: data
+      summary: JSON
+      description: Returns raw AutoReview data as a json
+      operationId: Json
+      parameters:
+        - name: body
+          in: body
+          required: false
+          schema:
+            type: object
+            properties:
+              configs:
+                type: object
+                properties:
+                  type:
+                    type: string
+                    description: type
+                    title: type
+                    x-ms-visibility: internal
+                  naming:
+                    type: object
+                    properties:
+                      oNamingTemplate:
+                        type: object
+                        properties:
+                          sReference:
+                            type: string
+                            description: sReference
+                            title: Naming Reference
+                            x-ms-visibility: advanced
+                          char:
+                            type: integer
+                            format: int32
+                            description: char
+                            title: Naming Char
+                            x-ms-visibility: advanced
+                          data:
+                            type: array
+                            items:
+                              type: object
+                              properties:
+                                Type:
+                                  type: string
+                                  description: Type
+                                  title: Naming Type
+                                  x-ms-visibility: advanced
+                                Letter:
+                                  type: string
+                                  description: Letter
+                                  title: Naming Letter
+                                  x-ms-visibility: advanced
+                            description: data
+                            x-ms-visibility: advanced
+                        description: oNamingTemplate
+                        x-ms-visibility: advanced
+                    description: naming
+                    x-ms-visibility: advanced
+                  complexity:
+                    type: object
+                    properties:
+                      sReference:
+                        type: string
+                        description: sReference
+                        title: Reference Complexity
+                        x-ms-visibility: advanced
+                      aComplexityTemplate:
+                        type: array
+                        items:
+                          type: object
+                          properties:
+                            Name:
+                              type: string
+                              description: Name
+                              title: Action Name
+                              x-ms-visibility: advanced
+                            Complexity:
+                              type: integer
+                              format: int32
+                              description: Complexity
+                              title: Action Value
+                              x-ms-visibility: advanced
+                        description: aComplexityTemplate
+                        x-ms-visibility: advanced
+                    description: complexity
+                    x-ms-visibility: advanced
+                description: configs
+              properties:
+                type: object
+                properties:
+                  displayName:
+                    type: string
+                    description: Name of flow
+                    title: Display Name
+                  name:
+                    type: string
+                    description: Unique identifier (also shown as name/resourceid)
+                    title: Flow ID
+                  owner:
+                    type: string
+                    description: Flow owner
+                    title: Owner
+                  environment:
+                    type: string
+                    description: Flow environment
+                    title: Environment
+                  definition:
+                    type: string 
+                    properties: {}
+                    title: Definition
+                    description: Definition
+                description: properties
+                required:
+                  - displayName
+                  - environment
+                  - owner
+                  - name
+                  - definition
+            required:
+              - properties
+              - configs
+  /file:
+    post:
+      responses:
+        '200':
+          description: default
+          schema:
+            type: object
+            properties:
+              file:
+                type: string
+                description: file
+              data:
+                type: string
+                description: data
+      summary: Files
+      description: Returns generated files
+      operationId: File
+      parameters:
+        - name: body
+          in: body
+          required: false
+          schema:
+            type: object
+            properties:
+              configs:
+                type: object
+                properties:
+                  type:
+                    type: string
+                    description: File type
+                    title: Type
+                    x-ms-visibility: important
+                    enum:
+                      - review
+                      - report
+                      - diagram
+                      - exceptions
+                  naming:
+                    type: object
+                    properties:
+                      oNamingTemplate:
+                        type: object
+                        properties:
+                          sReference:
+                            type: string
+                            description: sReference
+                            title: Naming Reference
+                            x-ms-visibility: advanced
+                          char:
+                            type: integer
+                            format: int32
+                            description: char
+                            title: Naming Char
+                            x-ms-visibility: advanced
+                          data:
+                            type: array
+                            items:
+                              type: object
+                              properties:
+                                Type:
+                                  type: string
+                                  description: Type
+                                  title: Naming Type
+                                  x-ms-visibility: advanced
+                                Letter:
+                                  type: string
+                                  description: Letter
+                                  title: Naming Letter
+                                  x-ms-visibility: advanced
+                            description: data
+                            x-ms-visibility: advanced
+                        description: oNamingTemplate
+                        x-ms-visibility: advanced
+                    description: naming
+                    x-ms-visibility: advanced
+                  complexity:
+                    type: object
+                    properties:
+                      sReference:
+                        type: string
+                        description: sReference
+                        title: Reference Complexity
+                        x-ms-visibility: advanced
+                      aComplexityTemplate:
+                        type: array
+                        items:
+                          type: object
+                          properties:
+                            Name:
+                              type: string
+                              description: Name
+                              title: Action Name
+                              x-ms-visibility: advanced
+                            Complexity:
+                              type: integer
+                              format: int32
+                              description: Complexity
+                              title: Action Value
+                              x-ms-visibility: advanced
+                        description: aComplexityTemplate
+                        x-ms-visibility: advanced
+                    description: complexity
+                    x-ms-visibility: advanced
+                  ratings:
+                    type: object
+                    properties:
+                      sReference:
+                        type: string
+                        description: sReference
+                        title: Referenc Ratings
+                        x-ms-visibility: advanced
+                      oRatingsTemplate:
+                        type: object
+                        properties:
+                          complexityAm:
+                            type: integer
+                            format: int32
+                            description: complexityAm
+                            title: Complexity Amber Value
+                            x-ms-visibility: advanced
+                          complexityRe:
+                            type: integer
+                            format: int32
+                            description: complexityRe
+                            title: Complexity Red Value
+                            x-ms-visibility: advanced
+                          actionsAm:
+                            type: integer
+                            format: int32
+                            description: actionsAm
+                            title: Actions Amber Value
+                            x-ms-visibility: advanced
+                          actionsRe:
+                            type: integer
+                            format: int32
+                            description: actionsRe
+                            title: Actions Red Value
+                            x-ms-visibility: advanced
+                          variablesAm:
+                            type: integer
+                            format: int32
+                            description: variablesAm
+                            title: Variables Amber Value
+                            x-ms-visibility: advanced
+                          variablesRe:
+                            type: integer
+                            format: int32
+                            description: variablesRe
+                            title: Varaibales Red Value
+                            x-ms-visibility: advanced
+                          exceptionsAm:
+                            type: integer
+                            format: int32
+                            description: exceptionsAm
+                            title: Exceptions Amber Value
+                            x-ms-visibility: advanced
+                          exceptionsRe:
+                            type: integer
+                            format: int32
+                            description: exceptionsRe
+                            title: Exceptions Red Value
+                            x-ms-visibility: advanced
+                        description: oRatingsTemplate
+                        x-ms-visibility: advanced
+                    description: ratings
+                    x-ms-visibility: advanced
+                  scoring:
+                    type: object
+                    properties:
+                      sReference:
+                        type: string
+                        description: sReference
+                        title: Reference Scoring
+                        x-ms-visibility: advanced
+                      aScoringTemplate:
+                        type: array
+                        items:
+                          type: object
+                          properties:
+                            Name:
+                              type: string
+                              description: Name
+                              title: Scoring Name
+                              x-ms-visibility: advanced
+                            Score:
+                              type: integer
+                              format: int32
+                              description: Score
+                              title: Scoring Value
+                              x-ms-visibility: advanced
+                            Note:
+                              type: string
+                              description: Note
+                              title: Scoring Note
+                              x-ms-visibility: advanced
+                        description: aScoringTemplate
+                        x-ms-visibility: advanced
+                    description: scoring
+                    x-ms-visibility: advanced
+                description: configs
+              properties:
+                type: object
+                properties:
+                  displayName:
+                    type: string
+                    description: Name of flow
+                    title: Display Name
+                  name:
+                    type: string
+                    description: Unique identifier (also shown as name/resourceid)
+                    title: Flow ID
+                  owner:
+                    type: string
+                    description: Flow owner
+                    title: Owner
+                  environment:
+                    type: string
+                    description: Flow environment
+                    title: Environment
+                  definition:
+                    type: string 
+                    properties: {}
+                    description: Definition
+                description: properties
+                required:
+                  - displayName
+                  - environment
+                  - owner
+                  - name
+                  - definition
+            required:
+              - properties
+              - configs
+parameters: {}
+responses: {}
+securityDefinitions:
+  Key:
+    type: apiKey
+    in: header
+    name: apiKey
+security:
+  - Key: []
+tags: []
