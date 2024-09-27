@@ -27,17 +27,20 @@
 					<span class="navbar-toggler-icon"></span>
 				</button>
 				<div class="collapse navbar-collapse" id="navbarsFurni">
-					<ul class="custom-navbar-nav navbar-nav ms-auto mb-2 mb-md-0">
-						<li class="nav-item ">
-							<a class="nav-link" href="index.html">Home</a>
-						</li>
-						<li class="active"><a class="nav-link" href="autoreview.html">AutoReview</a></li>
-						<li><a class="nav-link" href="appreview.html">AppReview</a></li>						
-						<li><a class="nav-link" href="utility.html">Utility</a></li>
-						<li><a class="nav-link" href="shortcut.html">Shortcut</a></li>
-						<li><a class="nav-link" href="share.html">Share</a></li>
-						<li><a class="nav-link" href="exception.html">Exception</a></li>
-					</ul>
+					<div class="collapse navbar-collapse" id="navbarsFurni">
+						<ul class="custom-navbar-nav navbar-nav ms-auto mb-2 mb-md-0">
+							<li>
+								<a class="nav-link" href="index.html">Home</a>
+							</li>
+							<li class="nav-item active"><a class="nav-link" href="autoreview.html">AutoReview</a></li>
+							<li><a class="nav-link" href="index.html#chrome-extensions">Chrome Extensions</a></li>
+							<li><a class="nav-link" href="blog.html">Blog</a></li>
+							<li><a class="nav-link" href="contact.html">Contact us</a></li>
+						</ul>
+						<ul class="custom-navbar-cta navbar-nav mb-2 mb-md-0 ms-5">
+							<li><a class="nav-link" href="https://docs.powerdevbox.com/"> Docs/Guides</a></li>
+						</ul>
+					</div>
 				</div>
 			</div>
 				
@@ -51,9 +54,8 @@
 						<div class="col-lg-5">
 							<div class="intro-excerpt">
 								<h1>AutoReview for Power Automate</h1>
-								<p class="mb-4">AutoReview is a free web browser extension that creates detail code review reports for your Power Automate Flows. 
-									Simply export your flow as either legacy export or Solution, then open it in the extension (all analysing is done locally in your browser) and AutoReview ​ will create the code review report.</p>
-								<p><a href="https://chromewebstore.google.com/detail/autoreview-for-power-auto/laaendfpgmhjilhjkbebekgdgfjaajif" class="btn btn-secondary me-2">Chrome Store</a><a href="https://microsoftedge.microsoft.com/addons/detail/autoreview/hcfghiolngicahomcoalaakoobpkefkj"class="btn btn-white-outline">Edge Store</a></p>
+								<p class="mb-4">AutoReview is a automated code review tool for Power Automate. It extracts all key information from the flow, generates configurable scoreing review, and interact diagram. It is availble as Chromium extension, Windows App, Power Platform Connector, and API. </p>
+								
 							</div>
 						</div>
 						<div class="col-lg-7" style="max-width: 100%;overflow-x: hidden;">
@@ -62,95 +64,237 @@
 							</div>
 						</div>
 					</div>
+					<p>
+						<a href="https://apps.microsoft.com/detail/9mzzvsp03808?hl=en-US&gl=US" class="btn btn-secondary me-2">Microsoft Store</a>
+						<a href="https://learn.microsoft.com/en-us/connectors/autoreview/"class="btn btn-white-outline">Power Platform</a>				
+						<a href="https://chromewebstore.google.com/detail/autoreview-for-power-auto/laaendfpgmhjilhjkbebekgdgfjaajif" class="btn btn-secondary me-2">Chrome Store</a>
+						<a href="https://microsoftedge.microsoft.com/addons/detail/autoreview/hcfghiolngicahomcoalaakoobpkefkj"class="btn btn-white-outline">Edge Store</a>
+						<a href="https://app.swaggerhub.com/apis/PowerDevBox/AutoReview/1.0.0" class="btn btn-secondary me-2">API</a>
+					</p>
 				</div>
 			</div>
 		<!-- End Hero Section -->
 
-		<!-- Start Testimonial Slider -->
-		<div class="testimonial-section before-footer-section">
+		<div class="why-choose-section">
 			<div class="container">
-				<div class="row">
-					<div class="col-lg-7 mx-auto text-center">
-						<h2 class="section-title">Live Examples</h2>
+				<div class="row justify-content-between">
+					<div class="col-lg-4">
+						<br>
+						<h2 class="section-title" id="chrome-extensions">Files</h2>
+						<p>
+							AutoReview can create 3 different files from your flow (html based that can be download and used independently).						
+						</p>
+						<p><b>Report:</b> the review extracts all key information from the flow including:
+							<ul>
+								<li>Variables</li>
+								<li>Actions</li>
+								<ul>
+									<li>Name</li>
+									<li>Inputs</li>
+									<li>Run After</li>
+									<li>Nesting</li>
+								</ul>
+								<li>Connector Details</li>
+								<li>Trigger Info</li>
+								<li>Exception Handling</li>
+								<li>Connections</li>
+							</ul>
+						</p>
+						<p><b>Review:</b> Includes all report information and scores for:
+							<ul>
+								<li>Action Count/Complexity</li>
+								<li>Variable Count</li>
+								<li>Compose Use</li>
+								<li>Connector Settings</li>
+							</ul>
+						</p>
+						<p><b>Diagram:</b> A interact visual reprenstation of the flow in SVG format</p>
 					</div>
-				</div>
-
-				<div class="row justify-content-center">
-					<div class="col-lg-12">
-						<div class="testimonial-slider-wrap text-center">
-
-							<div id="testimonial-nav">
-								<span class="prev" data-controls="prev"><span class="fa fa-chevron-left"></span></span>
-								<span class="next" data-controls="next"><span class="fa fa-chevron-right"></span></span>
+					<div class="col-lg-7" style="padding-top: 0px;">
+						<div>
+							<div class="row">
+								<div class="col-lg-7 mx-auto text-center">
+									<h2 class="section-title">Live Examples</h2>
+									<i>Click to Open</i>
+								</div>
+							</div>					
+							<div class="row justify-content-center">
+								<div class="testimonial-slider-wrap text-center">	
+									<div id="testimonial-nav" aria-label="Carousel Navigation" tabindex="0">
+										<span class="prev" data-controls="prev" aria-controls="tns1" tabindex="-1"><span class="fa fa-chevron-left"></span></span>
+										<span class="next" data-controls="next" aria-controls="tns1" tabindex="-1"><span class="fa fa-chevron-right"></span></span>
+									</div>
+									<div class="tns-outer" id="tns1-ow">
+										<div class="tns-nav" aria-label="Carousel Pagination">
+											<button data-nav="0" aria-controls="tns1" style="" aria-label="Carousel Page 1  (Current Slide)" class="tns-nav-active" tabindex="-1"></button>
+											<button data-nav="1" aria-controls="tns1" style="" aria-label="Carousel Page 2" class="" tabindex="-1"></button>
+											<button data-nav="2" aria-controls="tns1" style="" aria-label="Carousel Page 3" class=""></button>
+										</div>
+										<div class="tns-liveregion tns-visually-hidden" aria-live="polite" aria-atomic="true">
+											slide 
+											<span class="current">1</span>  of 3
+										</div>
+										<div id="tns1-mw" class="tns-ovh">
+											<div class="tns-inner" id="tns1-iw">
+												<div class="testimonial-slider  tns-slider tns-carousel tns-subpixel tns-calc tns-horizontal" id="tns1" style="transform: translate3d(-60%, 0px, 0px);">
+													<div class="item tns-item" id="tns1-item0"aria-hidden="true" tabindex="-1">
+														<div class="row justify-content-center">
+															<div class="col-lg-8 mx-auto">
+																<div class="testimonial-block text-center">
+																	<blockquote class="mb-5">
+																	<p>Demo Diagram Export</p>
+																	</blockquote>
+																	<div class="author-info">
+																		<a href="https://wyattdave.github.io/Auto-Review/Auto-Review%20Demos/Diagram%20test.html" target="_blank">
+																			<img src="images/Screenshots/autoreview (3).PNG" alt="Maria Jones" class="img-fluid">
+																		</a>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="item tns-item" id="tns1-item1" aria-hidden="true" tabindex="-1">
+														<div class="row justify-content-center">
+															<div class="col-lg-8 mx-auto">
+																<div class="testimonial-block text-center">
+																	<blockquote class="mb-5">
+																		<p>Demo Review Export</p>
+																	</blockquote>
+		
+																	<div class="author-info">
+																		<a href="https://wyattdave.github.io/Auto-Review/Auto-Review%20Demos/Review%20test.html" target="_blank">
+																			<img src="images/Screenshots/autoreview (1).PNG" alt="Maria Jones" class="img-fluid">
+																		</a>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div> 									
+											<!-- END item -->
+		
+													<div class="item tns-item" id="tns1-item2" aria-hidden="true" tabindex="-1">
+														<div class="row justify-content-center">
+															<div class="col-lg-8 mx-auto">
+																<div class="testimonial-block text-center">
+																	<blockquote class="mb-5">
+																		<p>Demo Report Export</p>
+																	</blockquote>
+		
+																	<div class="author-info">
+																		<a href="https://wyattdave.github.io/Auto-Review/Auto-Review%20Demos/Report%20test.html" target="_blank">
+																			<img src="images/Screenshots/autoreview (2).PNG" alt="Maria Jones" class="img-fluid">
+																		</a>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div> 
+													<!-- END item -->
+																											
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
 							</div>
-
-							<div class="testimonial-slider">
-								<div class="item">
-									<div class="row justify-content-center">
-										<div class="col-lg-8 mx-auto">
-											<div class="testimonial-block text-center">
-												<blockquote class="mb-5">
-													<p>Demo Review Export</p>
-												</blockquote>
-
-												<div class="author-info">
-													<a href="https://wyattdave.github.io/Auto-Review/Auto-Review%20Demos/Review%20test.html" target="_blank">
-														<img src="images/Screenshots/autoreview (1).PNG" alt="Maria Jones" class="img-fluid">
-													</a>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div> 
-								
-								<!-- END item -->
-
-								<div class="item">
-									<div class="row justify-content-center">
-										<div class="col-lg-8 mx-auto">
-											<div class="testimonial-block text-center">
-												<blockquote class="mb-5">
-													<p>Demo Report Export</p>
-												</blockquote>
-
-												<div class="author-info">
-													<a href="https://wyattdave.github.io/Auto-Review/Auto-Review%20Demos/Report%20test.html" target="_blank">
-														<img src="images/Screenshots/autoreview (2).PNG" alt="Maria Jones" class="img-fluid">
-													</a>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div> 
-								<!-- END item -->
-								<div class="item">
-									<div class="row justify-content-center">
-										<div class="col-lg-8 mx-auto">
-											<div class="testimonial-block text-center">
-												<blockquote class="mb-5">
-													<p>Demo Diagram Export</p>
-												</blockquote>
-
-												<div class="author-info">
-													<a href="https://wyattdave.github.io/Auto-Review/Auto-Review%20Demos/Diagram%20test.html" target="_blank">
-														<img src="images/Screenshots/autoreview (3).PNG" alt="Maria Jones" class="img-fluid">
-													</a>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>  
-								<!-- END item -->
-
-							</div>
-
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-		<!-- End Testimonial Slider -->
-	<!-- Chrome Extensions -->
+		
+		<!-- End Why Choose Us Section -->
+		<div class="why-choose-section" id="connector">
+			<div class="container">
+				<div class="row justify-content-between">
+					<div class="row my-10">
+						<h2 class="section-title">Power Platform Connector</h2>	
+						<div class="col-lg-5">
+							<img src="/images/connectors/autoreview-connector1.png" style="width:100%"alt="ar1"/>
+						</div>
+						<div class="col-lg-5">
+							<img src="/images/connectors/autoreview-connector2.png" style="width:100%" alt="ar2"/>
+						</div>
+					</div>
+					<div class="row my-10">
+						<br>
+						<p>The AutoReview Connector currently has 3 actions:
+							<ul>
+								<li>Information: Connector updates, usage, key expiray</li>
+								<li>JSON: Returns key information about the flow in json format, including actions, variables, connections</li>
+								<li>File: Creates HTML of the AutoReview Review file to be saved as a file and opned (Report & Diagram coming soon)</li>
+							</ul>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="why-choose-section" id="application">
+			<div class="container">
+				<div class="row justify-content-between">
+					<h2 class="section-title">Windows Application</h2>	
+					<div class="row my-10">
+						<div class="col-lg-5">
+							<img src="/images/autoreview app1.png" style="width:100%"alt="ar1"/>
+						</div>
+						<div class="col-lg-5">
+							<img src="/images/autoreview app2.png" style="width:100%" alt="ar2"/>
+						</div>
+						
+					</div>
+					<div class="row my-10">
+						
+						<p>The AutoReview App matches the Chrome Extenions with the following features:
+							<ul>
+								<li>All Files: Review, Report and Diagram</li>
+								<li>Solution: Solution information</li>
+								<li>Excel Exports: Variables, Actions and Connections</li>
+								<li>JSON Data</li>
+								<li>Flow Definition</li>
+								<li>Compare With Previous: Differences between 2 flows</li>
+								<li>Open From Zip File: Right click on anu Zip file to open *Not in Ext</li>
+							</ul>
+						</p>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+	
+		<div class="why-choose-section" id="Chrome-Extension">
+			<div class="container">
+				<div class="row justify-content-between">
+					<h2 class="section-title">Chrome Extension</h2>	
+					<div class="row my-10">
+						<div class="col-lg-5">
+							<img src="/images/autoreview ext1.png" style="width:100%"alt="ar1"/>
+						</div>
+						<div class="col-lg-5">
+							<img src="/images/autoreview ext2.png" style="width:100%" alt="ar2"/>
+						</div>
+						
+					</div>
+					<div class="row my-10">
+				
+						
+						<p>The AutoReview Extnesion matches the Windows App with the following features:
+							<ul>
+								<li>All Files: Review, Report and Diagram</li>
+								<li>Solution: Solution information</li>
+								<li>Excel Exports: Variables, Actions and Connections</li>
+								<li>JSON Data</li>
+								<li>Flow Definition</li>
+								<li>Compare With Previous: Differences between 2 flows</li>
+								<li>Open Fcurrent flow on screen *Not in App</li>
+							</ul>
+						</p>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+		<br>
 	<div class="why-choose-section">
 		<div class="container">
 			<div class="row justify-content-between">
@@ -161,9 +305,9 @@
 						<div class="col-6 col-md-6">
 							<div class="feature">
 								<div class="icon">
-									<a href="autoreview guide.html"><img src="images/guide.png" class="icons" alt="Image" class="imf-fluid"></a>
+									<a href="https://docs.powerdevbox.com/autoreview/autoreview-chromium-extension"><img src="images/guide.png" class="icons" alt="Image" class="imf-fluid"></a>
 								</div>
-								<a href="autoreview guide.html"><h3>Guide</h3></a>
+								<a href="https://docs.powerdevbox.com/autoreview/autoreview-chromium-extension"><h3>Guide</h3></a>
 								<p>Guide to use AutoReview</p>
 							</div>
 						</div>
@@ -190,11 +334,24 @@
 						<div class="col-6 col-md-6">
 							<div class="feature">
 								<div class="icon">
-									<a href="assets/AutoReview-Schema.json" target="_blank"><img src="images/schema.png" class="icons" alt="Image" class="imf-fluid"></a>
+									<a href="api\PowerDevBox-AutoReview-1.0.0-swagger.json" target="_blank"><img src="images/schema.png" class="icons" alt="Image" class="imf-fluid"></a>
 								</div>
-								<a href="assets/AutoReview-Schema.json" target="_blank"><h3>Schema</h3></a>
+								<a href="api\PowerDevBox-AutoReview-1.0.0-swagger.json" target="_blank"><h3>Schema</h3></a>
 								<p>Schema of AutoReview Data output</p>
 							</div>
+						</div>
+						<div class="col-6 col-md-6">
+							<div class="feature">
+								<div class="icon">
+									<a href="assets/AutoReviewDemo_1_0_0_1.zip" download><img src="images/zip.png" class="icons" alt="Image" class="imf-fluid"></a>
+								</div>
+								<a href="assets/AutoReviewDemo_1_0_0_1.zip" download><h3>Demo Flow</h3></a>
+								<p>Download solution with Demo AutoReview</p>
+							</div>
+						</div>
+						<div class="col-6 col-md-6">
+							<div class="feature">
+								</div>
 						</div>
 					</div>
 				</div>
