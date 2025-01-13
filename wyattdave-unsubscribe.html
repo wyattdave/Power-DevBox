@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GET Form Example</title>
+</head>
+<body>
+    <p>Unsubscribe to: <a href="https://dev.to/wyattdave">https://dev.to/wyattdave</a></p>
+    <form action="https://prod-14.uksouth.logic.azure.com:443/workflows/9908895d04aa4bf9baa59177c9f5025b/triggers/manual/paths/invoke" method="GET">
+        <label for="query">Email Address:</label>
+        <input value="2016-06-01" id="api-version" name="api-version" style="display:none"/>
+        <input value="/triggers/manual/run" id="sp" name="sp" style="display:none"/>
+        <input value="1.0" id="sv" name="sv" style="display:none"/>
+        <input value="K3Asl1Aa5mWg40QgXHuWRIZDaNILwT19un7sUxr0Lag" id="sig" name="sig" style="display:none"/>
+        <input type="text" id="id" name="id"/>
+        <button type="submit">Unsubscribe</button>
+    </form>
+</body>
+</html>

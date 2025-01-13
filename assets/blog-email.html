@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Template</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .header-bar {
+            background-color: #3b3b3b;           
+            padding: 10px;
+            text-align: center;
+            border-radius: 5px 5px 0 0;
+        }
+        .header-bar img {
+            max-width: 70px;
+            vertical-align: middle;
+            margin-right: 10px;
+        }
+        .header-bar h1 {
+            display: inline;
+            font-size: 50px;
+            color:#ffffff;
+        }
+        .center{
+            vertical-align: middle;
+            padding-top: auto;
+            padding-bottom: auto;
+        }
+        .blog-large, .blog-link {
+            margin: 20px 0;
+        }
+        .blog-large img, .blog-link img {
+            width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+        .blog-row {
+            display: flex;
+            justify-content: space-between;
+        }
+        .blog-link {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 48%;
+        }
+        .footer {
+            text-align: center;
+            font-size: 12px;
+            background-color: #3b3b3b;
+            color: #ffffff;
+            margin-top: 20px;
+        }
+        .social-media {
+            margin: 10px 10px auto auto;
+            display: flex;
+            justify-content: center;
+            align-items: center; /* Optional: centers items vertically */
+            gap: 10px; /* Adjust the spacing between links */
+        }
+        .social-media a {
+            margin: 10px 10px;
+            text-decoration: none;
+            color: #ffffff;
+        }
+        .footer a {
+            margin: 10px 10px;
+            text-decoration: none;
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header-bar">
+            <img src="https://media2.dev.to/dynamic/image/width=320,height=320,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Fuser%2Fprofile_image%2F653003%2Ff6da9df7-019e-4189-ab7f-c5c527fe1db6.png" style="width:200px" alt="Logo">
+            <div class="center"></div><h1>WyattDave</h1>
+        </div>
+        <div class="header">
+            <h2>New Blog Released!</h2>
+        </div>
+        <div class="blog-large">
+            <img src="{articleCover}" alt="{articleTitle}">
+            <div>
+                <h3><a href="{articleUrl}">{articleTitle}</a></h3>
+                <p>{articlePublished}</p>
+                <p>{articleSummary}</p>
+                <a href="{articleUrl}">Continue reading</a>
+            </div>
+        </div>
+        <div class="header">
+            <h2>In case you missed them</h2>
+        </div>
+        <div class="blog-row">
+            <div class="blog-link">
+                <img src="{articleCover2}" alt="{articleTitle2}">
+                <div>
+                    <h3><a href="{articleUrl2}">{articleTitle2}</a></h3>
+                    <p>{articlePublished2}</p>
+                </div>
+            </div>
+            <div class="blog-link">
+                <img src="{articleCover3}" alt="{articleTitle3}">
+                <div>
+                    <h3><a href="{articleUrl3}">{articleTitle3}</a></h3>
+                    <p>{articlePublished3}</p>
+                </div>
+            </div>
+        </div>
+        <div class="header">
+            <h2>Pro Developer Series!</h2>
+        </div>
+        <div class="blog-row">
+            <div class="blog-link">
+                <img src="https://powerdevbox.com/images/pro%20automate.png" alt="Flow Pro Dev Thumbnail">
+                <div>
+                    <h3><a href="https://dev.to/wyattdave/series/19970">Power Automate Pro Dev</a></h3>
+                    <p>Collection of blogs for advanced Power Automate Developers.</p>
+                </div>
+            </div>
+            <div class="blog-link">
+                <img src="https://powerdevbox.com/images/pro%20app.png" alt="App Pro Dev Thumbnail">
+                <div>
+                    <h3><a href="https://dev.to/wyattdave/series/19972">Power Apps Pro App</a></h3>
+                    <p>Collection of blogs for Power App Developers</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <br>
+            <a href="https://dev.to/wyattdave">https://dev.to/wyattdave</a>
+            <div class="social-media">
+                <a
+                href="https://powerdevbox.com/blog.html"
+                target="_blank"><img alt="Facebook"
+                    height="auto"
+                    src="https://powerdevbox.com/images/pdb.png"
+                    style="display: block; height: auto; border: 0;"
+                    title="pdb"
+                    width="32" /></a>
+                <a  href="https://x.com/wyattdavedev"
+                    target="_blank"><img alt="Twitter"
+                        height="auto"
+                        src="https://powerdevbox.com/images/twitter2x.png"
+                        style="display: block; height: auto; border: 0;"
+                        title="twitter"
+                        width="32" /></a>
+                 <a href="https://www.linkedin.com/in/wyattdave/"
+                        target="_blank"><img alt="Linkedin"
+                            height="auto"
+                            src="https://powerdevbox.com/images/linkedin2x.png"
+                            style="display: block; height: auto; border: 0;"
+                            title="linkedin"
+                            width="32" /></a>
+                <a href="https://github.com/wyattdave"
+                target="_blank"><img alt="github"
+                    height="auto"
+                    src="https://powerdevbox.com/images/github.png"
+                    style="display: block; height: auto; border: 0;"
+                    title="instagram"
+                    width="32" /></a>
+
+            </div>
+            <br>
+            <p>If you no longer wish to receive these emails, you can<u><a href="https//powerdevbox.com/wyattdave-unsubscribe.html">unsubscribe</a></u>.</p>
+        </div>
+    </div>>
+</body>
+</html>
+```
