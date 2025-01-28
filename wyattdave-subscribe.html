@@ -7,11 +7,29 @@
 </head>
 <body>
     <h1>Subscribe to David Wyatts Blog</h1>
-    <form action="https://prod-30.uksouth.logic.azure.com:443/workflows/f439f3dae09c406ab3aaeb0008eef9f9/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=vqdniQAUj_JwXj9ERhp3kCs5k42K42nxsnuXQXltNiI" method="post">      
+    <form id ="subscribeForm" action="" method="post">      
         <label for="email">Email:</label>
         <input type="email" id="email" name="email" required>
         <button type="submit">Subscribe</button>
         <input name="key" value="helloWorld" style="visibility: hidden;"/>
     </form>
 </body>
+<script>
+    const eForm = document.getElementById('subscribeForm');
+  
+     function getUrlParameter(name) {
+        name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+        var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+        var results = regex.exec(location.search);
+        return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+    }
+
+    const sTracker=getUrlParameter('tracker');
+    if (sTracker) {        
+        eForm.action = 'https://prod-30.uksouth.logic.azure.com:443/workflows/f439f3dae09c406ab3aaeb0008eef9f9/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=vqdniQAUj_JwXj9ERhp3kCs5k42K42nxsnuXQXltNiI&tracker=' + sTracker;
+        console.log(eForm.action);
+    }else{
+        eForm.action = 'https://prod-30.uksouth.logic.azure.com:443/workflows/f439f3dae09c406ab3aaeb0008eef9f9/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=vqdniQAUj_JwXj9ERhp3kCs5k42K42nxsnuXQXltNiI&tracker=noReference';
+    }
+</script>
 </html>
