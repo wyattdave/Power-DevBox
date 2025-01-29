@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agent Generator</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #3f3f3f;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            flex-direction: column;
+        }
+        form {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 10px;
+            width: 100%;
+            max-width: 640px;
+            justify-items: center;
+        }
+        input, textarea, button {
+            padding: 10px;
+            width: 100%;
+            box-sizing: border-box;
+            border-radius: 10px;
+        }
+        textarea {
+            height: 40px;
+            resize: vertical;
+        }
+        button, input[type="file"] {
+            background-color: white;
+            color: #3f3f3f;
+            border: none;
+            cursor: pointer;
+            grid-column: span 2;
+            text-align: center;
+            border-radius: 10px;
+        }
+        .icon {
+            width: 100px;
+        }
+        a {
+            color: white;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <img src="images/copilot studio stencil.svg" alt="Dlogo" class="icon">
+    <h1>Agent Generator</h1>
+    <form id="agentForm">
+        <input type="text" id="name" placeholder="Name">
+        <input type="text" id="description" placeholder="Description">
+        <input type="text" id="instructions" placeholder="Instructions">
+        <input type="text" id="welcomeMessage" placeholder="Welcome Message">
+        <textarea id="conversationStarters" placeholder="Conversation Starters (comma separated)"></textarea>
+        <textarea id="sites" placeholder="Sites (comma separated)"></textarea>    
+        <input type="file" id="icon" accept="image/*">
+        <button type="button" onclick="generateJSON()">Generate JSON</button>       
+    </form>
+    <br>
+    <a href="https://dev.to/wyattdave">Created by David Wyatt - check out the related blog </a>
+    <script>
+        function generateJSON() {
+            const conversationStarters = document.getElementById('conversationStarters').value.split(',').map(text => ({ text: text.trim() }));
+            const welcomeMessage = document.getElementById('welcomeMessage').value;
+            const capabilityName = "WebSearch";
+            const sites = document.getElementById('sites').value.split(',').map(url => ({ url: url.trim() }));
+            const description = document.getElementById('description').value;
+            const instructions = document.getElementById('instructions').value;
+            const name = document.getElementById('name').value;
+            const iconFile = document.getElementById('icon').files[0];
+
+            const reader = new FileReader();
+            reader.onload = function(event) {
+                const iconBase64 = event.target.result;
+
+                const json = {
+                    customCopilotConfig: {
+                        conversationStarters: {
+                            conversationStarterList: conversationStarters,
+                            welcomeMessage: { text: welcomeMessage }
+                        },
+                        gptDefinition: {
+                            capabilities: [
+                                {
+                                    name: capabilityName,
+                                    sites: sites
+                                }
+                            ],
+                            description: description,
+                            instructions: instructions,
+                            name: name
+                        },
+                        icon: iconBase64
+                    },
+                    schemaVersion: "0.2.0"
+                };
+
+                const blob = new Blob([JSON.stringify(json, null, 2)], { type: 'application/json' });
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = 'agent.json';
+                a.click();
+                URL.revokeObjectURL(url);
+            };
+
+            if (iconFile) {
+                reader.readAsDataURL(iconFile);
+            } else {
+                alert('Please upload an icon image.');
+            }
+        }
+    </script>
+</body>
+</html>
