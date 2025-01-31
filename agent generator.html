@@ -18,35 +18,37 @@
         }
         form {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 10px;
             width: 100%;
-            max-width: 840px;
+            max-width: 640px;
             justify-items: center;
         }
-        input, textarea, button {
+        input, textarea, button, label {
             padding: 10px;
             width: 100%;
             box-sizing: border-box;
-            border-radius: 10px;            
+            border-radius: 10px;
         }
         textarea {
             height: 80px;
             resize: vertical;
         }
-        button, input[type="file"] {
+        button, label {
             background-color: white;
             color: #3f3f3f;
             border: none;
             cursor: pointer;
             text-align: center;
-            border-radius: 10px;
         }
-        input[type="file"]{
-            grid-column: span 2;
+        input[type="file"] {
+            display: none;
         }
         .icon {
             width: 100px;
+        }
+        .full-width {
+            grid-column: span 2;
         }
         a {
             color: white;
@@ -55,14 +57,18 @@
         @media (max-width: 700px) {
             form {
                 grid-template-columns: 1fr;
-                padding:20px 20px 20px
+                padding: 20px;
+                width: calc(100% - 40px);
+                justify-items: center;
             }
-            button, input[type="file"] {
+            button, label {
                 grid-column: span 1;
                 min-width: 200px;
             }
         }
-
+        .full-width {
+            grid-column: span 1;
+        }
     </style>
 </head>
 <body>
@@ -73,11 +79,12 @@
         <input type="text" id="description" placeholder="Description" value="This is an agent curated based on the content from David Wyatts Blogs.">
         <input type="text" id="instructions" placeholder="Instructions" value="Provide helpful, accurate, and relevant information while speaking in a posh british accent.">
         <input type="text" id="welcomeMessage" placeholder="Welcome Message" value="Welcome! Learn all about the Power Platform.">
-        <textarea id="conversationStarters" placeholder="Conversation Starters (comma separated)" >What is the most recent blog, What are the featured blog</textarea>
-        <textarea id="sites" placeholder="Sites (comma separated)" >https://dev.to/wyattdave,https://powerdevbox.com/blog.html</textarea>    
-        <input type="file" id="icon" accept="image/*">
-        <button type="button" onclick="generateJSON()">Generate Agent File</button>
-        <button type="button" onclick="clearForm()">Clear</button>       
+        <textarea id="conversationStarters" placeholder="Conversation Starters (comma separated)">What is the most recent blog, What are the featured blog</textarea>
+        <textarea id="sites" placeholder="Sites (comma separated)">https://dev.to/wyattdave,https://powerdevbox.com/blog.html</textarea>
+        <label for="icon" class="full-width">Select Image</label>
+        <input type="file" id="icon" accept="image/*" class="full-width">
+        <button type="button" class="full-width" onclick="generateJSON()">Generate Agent File</button>
+        <button type="button" class="full-width" onclick="clearForm()">Clear</button>
     </form>
     <br>
     <a href="https://dev.to/wyattdave">Created by David Wyatt - check out the related blog </a>
@@ -122,7 +129,7 @@
                 const url = URL.createObjectURL(blob);
                 const a = document.createElement('a');
                 a.href = url;
-                a.download = name+'.json';
+                a.download = name + '.json';
                 a.click();
                 URL.revokeObjectURL(url);
             };
@@ -133,13 +140,9 @@
                 alert('Please upload an icon image.');
             }
         }
-        function clearForm(){
-            document.getElementById('conversationStarters').value="";
-            document.getElementById('welcomeMessage').value="";       
-            document.getElementById('sites').value="";
-            document.getElementById('description').value="";
-            document.getElementById('instructions').value="";
-            document.getElementById('name').value="";
+
+        function clearForm() {
+            document.getElementById('agentForm').reset();
         }
     </script>
 </body>
