@@ -18,20 +18,20 @@
         }
         form {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
             gap: 10px;
             width: 100%;
-            max-width: 640px;
+            max-width: 840px;
             justify-items: center;
         }
         input, textarea, button {
             padding: 10px;
             width: 100%;
             box-sizing: border-box;
-            border-radius: 10px;
+            border-radius: 10px;            
         }
         textarea {
-            height: 40px;
+            height: 80px;
             resize: vertical;
         }
         button, input[type="file"] {
@@ -39,9 +39,11 @@
             color: #3f3f3f;
             border: none;
             cursor: pointer;
-            grid-column: span 2;
             text-align: center;
             border-radius: 10px;
+        }
+        input[type="file"]{
+            grid-column: span 2;
         }
         .icon {
             width: 100px;
@@ -64,17 +66,18 @@
     </style>
 </head>
 <body>
-    <img src="images/copilot studio stencil.svg" alt="Dlogo" class="icon">
+    <img src="images/copilot studio stencil.svg" alt="logo" class="icon">
     <h1>Agent Generator</h1>
     <form id="agentForm">
-        <input type="text" id="name" placeholder="Name">
-        <input type="text" id="description" placeholder="Description">
-        <input type="text" id="instructions" placeholder="Instructions">
-        <input type="text" id="welcomeMessage" placeholder="Welcome Message">
-        <textarea id="conversationStarters" placeholder="Conversation Starters (comma separated)"></textarea>
-        <textarea id="sites" placeholder="Sites (comma separated)"></textarea>    
+        <input type="text" id="name" placeholder="Name" value="Daves Blogs Agent">
+        <input type="text" id="description" placeholder="Description" value="This is an agent curated based on the content from David Wyatts Blogs.">
+        <input type="text" id="instructions" placeholder="Instructions" value="Provide helpful, accurate, and relevant information while speaking in a posh british accent.">
+        <input type="text" id="welcomeMessage" placeholder="Welcome Message" value="Welcome! Learn all about the Power Platform.">
+        <textarea id="conversationStarters" placeholder="Conversation Starters (comma separated)" >What is the most recent blog, What are the featured blog</textarea>
+        <textarea id="sites" placeholder="Sites (comma separated)" >https://dev.to/wyattdave,https://powerdevbox.com/blog.html</textarea>    
         <input type="file" id="icon" accept="image/*">
-        <button type="button" onclick="generateJSON()">Generate JSON</button>       
+        <button type="button" onclick="generateJSON()">Generate Agent File</button>
+        <button type="button" onclick="clearForm()">Clear</button>       
     </form>
     <br>
     <a href="https://dev.to/wyattdave">Created by David Wyatt - check out the related blog </a>
@@ -129,6 +132,14 @@
             } else {
                 alert('Please upload an icon image.');
             }
+        }
+        function clearForm(){
+            document.getElementById('conversationStarters').value="";
+            document.getElementById('welcomeMessage').value="";       
+            document.getElementById('sites').value="";
+            document.getElementById('description').value="";
+            document.getElementById('instructions').value="";
+            document.getElementById('name').value="";
         }
     </script>
 </body>
