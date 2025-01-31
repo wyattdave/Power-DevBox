@@ -50,6 +50,16 @@
             color: white;
             text-align: center;
         }
+        @media (max-width: 700px) {
+            form {
+                grid-template-columns: 1fr;
+                padding:20px 20px 20px
+            }
+            button, input[type="file"] {
+                grid-column: span 1;
+                min-width: 200px;
+            }
+        }
 
     </style>
 </head>
@@ -109,7 +119,7 @@
                 const url = URL.createObjectURL(blob);
                 const a = document.createElement('a');
                 a.href = url;
-                a.download = 'agent.json';
+                a.download = name+'.json';
                 a.click();
                 URL.revokeObjectURL(url);
             };

@@ -18,7 +18,7 @@
         }
         form {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
             gap: 10px;
             width: 100%;
             max-width: 640px;
@@ -26,6 +26,7 @@
         }
         input, textarea, button {
             padding: 10px;
+            min-width: 200px;
             width: 100%;
             box-sizing: border-box;
             border-radius: 10px;
@@ -41,6 +42,15 @@
             grid-column: span 2;
             text-align: center;
             border-radius: 10px;
+        }
+        @media (max-width: 700px) {
+            form {
+                grid-template-columns: 1fr;
+            }
+            button, input[type="file"] {
+                grid-column: span 1;
+                min-width: 200px;
+            }
         }
     </style>
 </head>
@@ -97,7 +107,7 @@
                 const url = URL.createObjectURL(blob);
                 const a = document.createElement('a');
                 a.href = url;
-                a.download = 'agent.json';
+                a.download = name+'.json';
                 a.click();
                 URL.revokeObjectURL(url);
             };
