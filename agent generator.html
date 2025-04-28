@@ -3,7 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agent Generator</title>
+    <meta name="author" content="wyattdave">
+    <link rel="shortcut icon" href="favicon.png">
+    <meta name="description" content="Developer Tools for Power Platform" />
+    <meta name="keywords" content="power automate, power apps, power platform, flows, low code, wyattdave,autoreview,appreview,flow utilizer"/>
+    <title>Copilot Studio Agent Generator</title>
     <style>
         body {
             font-family: 'Roboto', sans-serif;
@@ -73,7 +77,7 @@
 </head>
 <body>
     <img src="images/copilot studio stencil.svg" alt="logo" class="icon">
-    <h1>Agent Generator</h1>
+    <h1>COpilot Studio Agent Generator</h1>
     <form id="agentForm">
         <input type="text" id="name" placeholder="Name" value="Daves Blogs Agent">
         <input type="text" id="description" placeholder="Description" value="This is an agent curated based on the content from David Wyatts Blogs.">
@@ -87,7 +91,7 @@
         <button type="button" class="full-width" onclick="clearForm()">Clear</button>
     </form>
     <br>
-    <a href="https://dev.to/wyattdave">Created by David Wyatt - check out the related blog </a>
+    <a href="https://dev.to/wyattdave/copilot-studio-agents-the-new-excel-37eb">Created by David Wyatt - check out the related blog </a>
     <script>
         function generateJSON() {
             const conversationStarters = document.getElementById('conversationStarters').value.split(',').map(text => ({ text: text.trim() }));
