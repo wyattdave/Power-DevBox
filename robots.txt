@@ -1,0 +1,18 @@
+# Allow all search engines to crawl the site
+User-agent: *
+Disallow:
+
+# Disallow crawling of specific pages
+Disallow: /utility guide-legacy.html
+Disallow: /exception guide-legacy.html
+Disallow: /autoreview guide-legacy.html
+Disallow: /share guide-legacy.html
+Disallow: /excetption guide-legacy.html
+Disallow: /appreview guide-legacy.html
+Disallow: /shortcut guide-legacy.html
+Disallow: /adevto.html
+Disallow: /web apps.html
+Disallow: /connectors.html
+
+# Sitemap location
+Sitemap: https://powerdevbox.com/sitemap.xml
