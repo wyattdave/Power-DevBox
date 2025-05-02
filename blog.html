@@ -80,66 +80,22 @@
 				<!-- End Column 1 -->
 			</div>
 			<h1>Community Blog Series</h1>
+			
 			<div class="row">
-				<div class="col-12 col-sm-126 col-md-6">
+				<div class="col-lg-4 col-sm-12">
 					<div class="post-entry">
-						<img src="images/one min-302.png" alt="power automate one minute fixes" class="img-fluid">						
+						<img src="images/one min-302.png" alt="power automate one minute fixes" class="img-fluid" style="padding-right: 5px;">						
 					</div>
 				</div>
-				<div class="col-12 col-sm-126 col-md-6">
+				<div class="col-lg-4 sm-12"></div>
+				<div class="col-lg-4 col-sm-12">
 					<div class="post-entry">
-						<img src="images/components from components.png" alt="power apps components from components" class="img-fluid">		
+						<img src="images/components from components.png" alt="power apps components from components" class="img-fluid" tyle="padding-left: 5px;">		
 					</div>
 				</div>	
-			<div class="row">
-				<div class="col-12 col-sm-126 col-md-6">
-					<a href="https://community.powerplatform.com/blogs/post/?postid=a24ab9e4-3dc3-47dc-95a6-f253696f2e51">1 Minute Fixes - Handling 302 Redirect urls</a>
+				<div id="blogs-community" class="row">
+
 				</div>
-				<div class="col-12 col-sm-126 col-md-6">
-					<a href="https://community.powerplatform.com/blogs/post/?postid=09cfe7b5-f3e9-4710-b100-49460f2acf36">Components from Components - Stacked Notification Toasts</a>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-12 col-sm-126 col-md-6">
-					<a href="https://community.powerplatform.com/blogs/post/?postid=3ebe68b7-fd0a-4547-8624-e020fd395192">One Minute Fixes - Can't Call a Flow from a Power App</a>
-				</div>
-				<div class="col-12 col-sm-126 col-md-6">
-					<a href="https://community.powerplatform.com/blogs/post/?postid=eef8435b-cf50-424f-b1d7-20f2930511ba">Components from Components - Dynamic List Sorter</a>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-12 col-sm-126 col-md-6">
-					<a href="https://community.powerplatform.com/blogs/post/?postid=0beea6ba-e381-4d7b-983e-0e47bc0d5a8a">One Minute Fixes - Summing up a field</a>
-				</div>
-				<div class="col-12 col-sm-126 col-md-6">
-					<a href="https://community.powerplatform.com/blogs/post/?postid=9f0f054c-4b4b-ef11-a317-000d3a143966">Components from Components - Extendable Text Input
-					</a>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-12 col-sm-126 col-md-6">
-					<a href="https://community.powerplatform.com/blogs/post/?postid=e62d2874-3d13-457a-8ef3-e3f1e0a83443">One Minute Fixes - Outlook Trigger Not Firing</a>
-				</div>
-				<div class="col-12 col-sm-126 col-md-6">
-					<a href="https://community.powerplatform.com/blogs/post/?postid=b3d4acb9-bfc6-ef11-b8e8-7c1e5267b708">Components from Components - Dynamic Tags</a>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-12 col-sm-126 col-md-6">
-					<a href="https://community.powerplatform.com/blogs/post/?postid=f641c398-feae-4d84-b9d3-d9f6aab5607a">One Minute Fixes - Reading Exception Message</a>
-				</div>
-				<div class="col-12 col-sm-126 col-md-6">
-					<a href=""></a>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-12 col-sm-126 col-md-6">
-					<a href=""></a>
-				</div>
-				<div class="col-12 col-sm-126 col-md-6">
-					<a href=""></a>
-				</div>
-			</div>
 		</div>
 	</div>
 	<!-- End Product Section -->	
@@ -344,7 +300,7 @@
 		<script src="js/tiny-slider.js"></script>
 		<script src="js/custom.js"></script>
 		<script>
-			const sHTML='<div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0"><a class="product-item" href="{link}"><img src="{image}" target="_blank" class="img-fluid product-thumbnail"><h3 class="product-title">{title}</h3><strong class="product-price">{published}</strong></a></div> '
+			const sHTML='<div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0"><a class="product-item" href="{link} "><img src="{image}" target="_blank" class="img-fluid product-thumbnail"><h3 class="product-title">{title}</h3><strong class="product-price">{published}</strong></a></div> '
 			const eDiv=document.getElementById("blogs");
 			Window.onload = getBlogs( );
 			async function getBlogs() {
@@ -356,6 +312,40 @@
 					eDiv.innerHTML+=sElement;
 				});
 			}
+
+			const sHTML2='<div class="row"><div class="col-lg-6 col-sm-12"><a href="{link} target="_blank"><strong>{title}</strong>&nbsp;{published}</a></div><div class="col-lg-6 col-sm-12"><a href="{link2} target="_blank"><strong>{title2}</strong>&nbsp;{published2}</a></div></div> ';
+			const eDiv2=document.getElementById("blogs-community");
+			Window.onload = getBlogs2( );
+			async function getBlogs2() {
+				const response2 = await fetch("https://script.google.com/macros/s/AKfycbysAveoS7BLJhlPW1V4c---eEG7NsyGSr-Tu75lDvvvl3IFLTyj-rGDRTziKnB8bL84/exec");
+				const aBlogs2 = await response2.json();
+				console.log(aBlogs2);
+				aOneMin=aBlogs2.filter(item => item.series=="One Minute Fixes");
+				aComponents=aBlogs2.filter(item => item.series=="Components From Components");
+				let iRows=aOneMin.length;
+				if (aComponents.length>iRows){iRows=aComponents.length}
+				let sCollection="";
+				for(i=0;i<iRows;i++){
+					let sElement="";
+					if (aOneMin[i]){
+						sElement=sHTML2.replace("{title}",aOneMin[i].title).replace("{published}",formattedDate(aOneMin[i].published_at)).replace("{link}",aOneMin[i].url)
+					}else{
+						sElement=sHTML2.replace('<div class="col-6 sm-12"><a href="{link} target="_blank"><strong>{title}</strong>&nbsp;{published}</a></div>','')
+					}
+					if (aComponents[i]){
+						sElement=sElement.replace("{title2}",aComponents[i].title).replace("{published2}",formattedDate(aComponents[i].published_at)).replace("{link2}",aComponents[i].url)
+					}else{
+						sElement=sElement.replace('<div class="col-6 sm-12"><a href="{link2} target="_blank"><strong>{title2}</strong>&nbsp;{published2}</a></div>','')	
+					}	
+					sCollection+=sElement;
+				}
+				eDiv2.innerHTML+=sCollection;
+			}
+			
+			function formattedDate(sDate){
+				const date = new Date(sDate);
+				return `${date.getDate().toString().padStart(2, '0')}/${(date.getMonth() + 1).toString().padStart(2, '0')}/${date.getFullYear()}`;
+			}  
 		</script>
 	</body>
 
