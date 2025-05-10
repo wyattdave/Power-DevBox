@@ -1,0 +1,969 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <link rel="shortcut icon" href="https://powerdevbox.com/favicon.png">
+	<style>
+		body {
+			
+			font-family: 'Source Sans Pro', sans-serif;
+			margin: 0;
+			background-color: #2f2f2f;
+			background-size: 450px;
+			background-blend-mode: overlay;
+			background-repeat:repeat;
+			background-image: url("https://powerdevbox.com/images/power%20platform%20t%20shirt.png");
+		}
+
+		a.footer,  a.footer:visited  {
+			color: white;
+		}
+
+		.table_component {
+			overflow: auto;
+			width: 90%;
+			padding: 24px;
+		}
+
+		.table_component table {
+			border: 1px solid #dededf;
+			height: 100%;
+			width: 100%;
+			table-layout: fixed;
+			border-collapse: collapse;
+			border-spacing: 1px;
+			text-align: left;
+		}
+
+		.table_component caption {
+			caption-side: top;
+			text-align: left;
+		}
+
+		.table_component th {
+			border: 1px solid #dededf;
+			background-color: #2f2f2f;
+			color: #ffffff;
+			padding: 5px;
+		}
+
+		.table_component td {
+			border: 1px solid #dededf;
+			background-color: #ffffff;
+			color: #000000;
+			padding: 5px;
+		}
+	</style>
+</head>
+
+<body>
+	<div style="position: sticky; top: 0; width:100%; background-color: #2f2f2f;">
+		<table style="border:0px; width:100%;">
+			<tr syle="Padding:10px">
+				<td><a href="https://powerdevbox.com"><img src="https://powerdevbox.com/images/power%20devbox%20grey.png" style="height: 100px;"/></a></td>
+				<td style="width:70%"><h1 style="color:white">Power Automate Expressions</h1></td>
+			</tr>
+		</table>
+	</div>
+	<div class="table_component" role="region" tabindex="0">
+		<a name="string-functions"></a></p>
+		<table aria-label="Table 3" class="table table-sm margin-top-none">
+			<thead>
+				<tr>
+					<th>String function</th>
+					<th style="width:80%">Task</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td><a href="https://learn.microsoft.com/en-gb/azure/logic-apps/workflow-definition-language-functions-reference#chunk"
+							data-linktype="relative-path">chunk</a></td>
+					<td>Split a string or collection into chunks of equal length.</td>
+				</tr>
+				<tr>
+					<td><a href="https://learn.microsoft.com/en-gb/azure/logic-apps/workflow-definition-language-functions-reference#concat"
+							data-linktype="relative-path">concat</a></td>
+					<td>Combine two or more strings, and return the combined string.</td>
+				</tr>
+				<tr>
+					<td><a href="https://learn.microsoft.com/en-gb/azure/logic-apps/workflow-definition-language-functions-reference#endswith"
+							data-linktype="relative-path">endsWith</a></td>
+					<td>Check whether a string ends with the specified substring.</td>
+				</tr>
+				<tr>
+					<td><a href="https://learn.microsoft.com/en-gb/azure/logic-apps/workflow-definition-language-functions-reference#formatNumber"
+							data-linktype="relative-path">formatNumber</a></td>
+					<td>Return a number as a string based on the specified format</td>
+				</tr>
+				<tr>
+					<td><a href="https://learn.microsoft.com/en-gb/azure/logic-apps/workflow-definition-language-functions-reference#guid"
+							data-linktype="relative-path">guid</a></td>
+					<td>Generate a globally unique identifier (GUID) as a string.</td>
+				</tr>
+				<tr>
+					<td><a href="https://learn.microsoft.com/en-gb/azure/logic-apps/workflow-definition-language-functions-reference#indexof"
+							data-linktype="relative-path">indexOf</a></td>
+					<td>Return the starting position for a substring.</td>
+				</tr>
+				<tr>
+					<td><a href="https://learn.microsoft.com/en-gb/azure/logic-apps/workflow-definition-language-functions-reference#isFloat"
+							data-linktype="relative-path">isFloat</a></td>
+					<td>Return a boolean that indicates whether a string is a floating-point number.</td>
+				</tr>
+				<tr>
+					<td><a href="https://learn.microsoft.com/en-gb/azure/logic-apps/workflow-definition-language-functions-reference#isInt"
+							data-linktype="relative-path">isInt</a></td>
+					<td>Return a boolean that indicates whether a string is an integer.</td>
+				</tr>
+				<tr>
+					<td><a href="https://learn.microsoft.com/en-gb/azure/logic-apps/workflow-definition-language-functions-reference#lastindexof"
+							data-linktype="relative-path">lastIndexOf</a></td>
+					<td>Return the starting position for the last occurrence of a substring.</td>
+				</tr>
+				<tr>
+					<td><a href="https://learn.microsoft.com/en-gb/azure/logic-apps/workflow-definition-language-functions-reference#length"
+							data-linktype="relative-path">length</a></td>
+					<td>Return the number of items in a string or array.</td>
+				</tr>
+				<tr>
+					<td><a href="https://learn.microsoft.com/en-gb/azure/logic-apps/workflow-definition-language-functions-reference#nthIndexOf"
+							data-linktype="relative-path">nthIndexOf</a></td>
+					<td>Return the starting position or index value where the <em>n</em>th occurrence of a substring
+						appears
+						in a string.</td>
+				</tr>
+				<tr>
+					<td><a href="https://learn.microsoft.com/en-gb/azure/logic-apps/workflow-definition-language-functions-reference#replace"
+							data-linktype="relative-path">replace</a></td>
+					<td>Replace a substring with the specified string, and return the updated string.</td>
+				</tr>
+				<tr>
+					<td><a href="https://learn.microsoft.com/en-gb/azure/logic-apps/workflow-definition-language-functions-reference#slice"
+							data-linktype="relative-path">slice</a></td>
+					<td>Return a substring by specifying the starting and ending position or value. See also <a
+							href="https://learn.microsoft.com/en-gb/azure/logic-apps/workflow-definition-language-functions-reference#substring"
+							data-linktype="relative-path">substring</a>.</td>
+				</tr>
+				<tr>
+					<td><a href="https://learn.microsoft.com/en-gb/azure/logic-apps/workflow-definition-language-functions-reference#split"
+							data-linktype="relative-path">split</a></td>
+					<td>Return an array that contains substrings, separated by commas, from a larger string based on a
+						specified delimiter character in the original string.</td>
+				</tr>
+				<tr>
+					<td><a href="https://learn.microsoft.com/en-gb/azure/logic-apps/workflow-definition-language-functions-reference#startswith"
+							data-linktype="relative-path">startsWith</a></td>
+					<td>Check whether a string starts with a specific substring.</td>
+				</tr>
+				<tr>
+					<td><a href="https://learn.microsoft.com/en-gb/azure/logic-apps/workflow-definition-language-functions-reference#substring"
+							data-linktype="relative-path">substring</a></td>
+					<td>Return characters from a string, starting from the specified position. See also <a
+							href="https://learn.microsoft.com/en-gb/azure/logic-apps/workflow-definition-language-functions-reference#slice"
+							data-linktype="relative-path">slice</a>.</td>
+				</tr>
+				<tr>
+					<td><a href="https://learn.microsoft.com/en-gb/azure/logic-apps/workflow-definition-language-functions-reference#toLower"
+							data-linktype="relative-path">toLower</a></td>
+					<td>Return a string in lowercase format.</td>
+				</tr>
+				<tr>
+					<td><a href="https://learn.microsoft.com/en-gb/azure/logic-apps/workflow-definition-language-functions-reference#toUpper"
+							data-linktype="relative-path">toUpper</a></td>
+					<td>Return a string in uppercase format.</td>
+				</tr>
+				<tr>
+					<td><a href="https://learn.microsoft.com/en-gb/azure/logic-apps/workflow-definition-language-functions-reference#trim"
+							data-linktype="relative-path">trim</a></td>
+					<td>Remove leading and trailing whitespace from a string, and return the updated string.</td>
+				</tr>
+			</tbody>
+		</table>
+
+
+		<p><a name="collection-functions"></a></p>
+		<table aria-label="Table 4" class="table table-sm margin-top-none">
+			<thead>
+				<tr>
+					<th>Collection function</th>
+					<th style="width:80%">Task</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td><a href="https://learn.microsoft.com/en-gb/azure/logic-apps/workflow-definition-language-functions-reference#chunk"
+							data-linktype="relative-path">chunk</a></td>
+					<td>Split a string or collection into chunks of equal length.</td>
+				</tr>
+				<tr>
+					<td><a href="https://learn.microsoft.com/en-gb/azure/logic-apps/workflow-definition-language-functions-reference#contains"
+							data-linktype="relative-path">contains</a></td>
+					<td>Check whether a collection has a specific item.</td>
+				</tr>
+				<tr>
+					<td><a href="https://learn.microsoft.com/en-gb/azure/logic-apps/workflow-definition-language-functions-reference#empty"
+							data-linktype="relative-path">empty</a></td>
+					<td>Check whether a collection is empty.</td>
+				</tr>
+				<tr>
+					<td><a href="https://learn.microsoft.com/en-gb/azure/logic-apps/workflow-definition-language-functions-reference#first"
+							data-linktype="relative-path">first</a></td>
+					<td>Return the first item from a collection.</td>
+				</tr>
+				<tr>
+					<td><a href="https://learn.microsoft.com/en-gb/azure/logic-apps/workflow-definition-language-functions-reference#intersection"
+							data-linktype="relative-path">intersection</a></td>
+					<td>Return a collection that has <em>only</em> the common items across the specified collections.
+					</td>
+				</tr>
+				<tr>
+					<td><a href="https://learn.microsoft.com/en-gb/azure/logic-apps/workflow-definition-language-functions-reference#item"
+							data-linktype="relative-path">item</a></td>
+					<td>If this function appears inside a repeating action over an array, return the current item in the
+						array during the action's current iteration.</td>
+				</tr>
+				<tr>
+					<td><a href="https://learn.microsoft.com/en-gb/azure/logic-apps/workflow-definition-language-functions-reference#join"
+							data-linktype="relative-path">join</a></td>
+					<td>Return a string that has <em>all</em> the items from an array, separated by the specified
+						character.
+					</td>
+				</tr>
+				<tr>
+					<td><a href="https://learn.microsoft.com/en-gb/azure/logic-apps/workflow-definition-language-functions-reference#last"
+							data-linktype="relative-path">last</a></td>
+					<td>Return the last item from a collection.</td>
+				</tr>
+				<tr>
+					<td><a href="https://learn.microsoft.com/en-gb/azure/logic-apps/workflow-definition-language-functions-reference#length"
+							data-linktype="relative-path">length</a></td>
+					<td>Return the number of items in a string or array.</td>
+				</tr>
+				<tr>
+					<td><a href="https://learn.microsoft.com/en-gb/azure/logic-apps/workflow-definition-language-functions-reference#reverse"
+							data-linktype="relative-path">reverse</a></td>
+					<td>Reverse the order of items in an array.</td>
+				</tr>
+				<tr>
+					<td><a href="https://learn.microsoft.com/en-gb/azure/logic-apps/workflow-definition-language-functions-reference#skip"
+							data-linktype="relative-path">skip</a></td>
+					<td>Remove items from the front of a collection, and return <em>all the other</em> items.</td>
+				</tr>
+				<tr>
+					<td><a href="https://learn.microsoft.com/en-gb/azure/logic-apps/workflow-definition-language-functions-reference#sort"
+							data-linktype="relative-path">sort</a></td>
+					<td>Sort items in a collection.</td>
+				</tr>
+				<tr>
+					<td><a href="https://learn.microsoft.com/en-gb/azure/logic-apps/workflow-definition-language-functions-reference#take"
+							data-linktype="relative-path">take</a></td>
+					<td>Return items from the front of a collection.</td>
+				</tr>
+				<tr>
+					<td><a href="https://learn.microsoft.com/en-gb/azure/logic-apps/workflow-definition-language-functions-reference#union"
+							data-linktype="relative-path">union</a></td>
+					<td>Return a collection that has <em>all</em> the items from the specified collections.</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<table aria-label="Table 5" class="table table-sm margin-top-none">
+			<p><a name="comparison-functions"></a></p>
+			<thead>
+				<tr>
+					<th>Logical comparison function</th>
+					<th style="width:80%">Task</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td><a href="https://learn.microsoft.com/en-gb/azure/logic-apps/workflow-definition-language-functions-reference#and"
+							data-linktype="relative-path">and</a></td>
+					<td>Check whether all expressions are true.</td>
+				</tr>
+				<tr>
+					<td><a href="https://learn.microsoft.com/en-gb/azure/logic-apps/workflow-definition-language-functions-reference#equals"
+							data-linktype="relative-path">equals</a></td>
+					<td>Check whether both values are equivalent.</td>
+				</tr>
+				<tr>
+					<td><a href="https://learn.microsoft.com/en-gb/azure/logic-apps/workflow-definition-language-functions-reference#greater"
+							data-linktype="relative-path">greater</a></td>
+					<td>Check whether the first value is greater than the second value.</td>
+				</tr>
+				<tr>
+					<td><a href="https://learn.microsoft.com/en-gb/azure/logic-apps/workflow-definition-language-functions-reference#greaterOrEquals"
+							data-linktype="relative-path">greaterOrEquals</a></td>
+					<td>Check whether the first value is greater than or equal to the second value.</td>
+				</tr>
+				<tr>
+					<td><a href="https://learn.microsoft.com/en-gb/azure/logic-apps/workflow-definition-language-functions-reference#if"
+							data-linktype="relative-path">if</a></td>
+					<td>Check whether an expression is true or false. Based on the result, return a specified value.
+					</td>
+				</tr>
+				<tr>
+					<td><a href="https://learn.microsoft.com/en-gb/azure/logic-apps/workflow-definition-language-functions-reference#isFloat"
+							data-linktype="relative-path">isFloat</a></td>
+					<td>Return a boolean that indicates whether a string is a floating-point number.</td>
+				</tr>
+				<tr>
+					<td><a href="https://learn.microsoft.com/en-gb/azure/logic-apps/workflow-definition-language-functions-reference#isInt"
+							data-linktype="relative-path">isInt</a></td>
+					<td>Return a boolean that indicates whether a string is an integer.</td>
+				</tr>
+				<tr>
+					<td><a href="https://learn.microsoft.com/en-gb/azure/logic-apps/workflow-definition-language-functions-reference#less"
+							data-linktype="relative-path">less</a></td>
+					<td>Check whether the first value is less than the second value.</td>
+				</tr>
+				<tr>
+					<td><a href="https://learn.microsoft.com/en-gb/azure/logic-apps/workflow-definition-language-functions-reference#lessOrEquals"
+							data-linktype="relative-path">lessOrEquals</a></td>
+					<td>Check whether the first value is less than or equal to the second value.</td>
+				</tr>
+				<tr>
+					<td><a href="https://learn.microsoft.com/en-gb/azure/logic-apps/workflow-definition-language-functions-reference#not"
+							data-linktype="relative-path">not</a></td>
+					<td>Check whether an expression is false.</td>
+				</tr>
+				<tr>
+					<td><a href="https://learn.microsoft.com/en-gb/azure/logic-apps/workflow-definition-language-functions-reference#or"
+							data-linktype="relative-path">or</a></td>
+					<td>Check whether at least one expression is true.</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<p><a name="conversion-functions"></a></p>
+
+		<table aria-label="Table 6" class="table table-sm margin-top-none">
+			<thead>
+				<tr>
+					<th>Conversion function</th>
+					<th style="width:80%">Task</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td><a href="https://learn.microsoft.com/en-gb/azure/logic-apps/workflow-definition-language-functions-reference#array"
+							data-linktype="relative-path">array</a></td>
+					<td>Return an array from a single specified input. For multiple inputs, see <a
+							href="https://learn.microsoft.com/en-gb/azure/logic-apps/workflow-definition-language-functions-reference#createArray"
+							data-linktype="relative-path">createArray</a>.</td>
+				</tr>
+				<tr>
+					<td><a href="https://learn.microsoft.com/en-gb/azure/logic-apps/workflow-definition-language-functions-reference#base64"
+							data-linktype="relative-path">base64</a></td>
+					<td>Return the base64-encoded version for a string.</td>
+				</tr>
+				<tr>
+					<td><a href="https://learn.microsoft.com/en-gb/azure/logic-apps/workflow-definition-language-functions-reference#base64ToBinary"
+							data-linktype="relative-path">base64ToBinary</a></td>
+					<td>Return the binary version for a base64-encoded string.</td>
+				</tr>
+				<tr>
+					<td><a href="https://learn.microsoft.com/en-gb/azure/logic-apps/workflow-definition-language-functions-reference#base64ToString"
+							data-linktype="relative-path">base64ToString</a></td>
+					<td>Return the string version for a base64-encoded string.</td>
+				</tr>
+				<tr>
+					<td><a href="https://learn.microsoft.com/en-gb/azure/logic-apps/workflow-definition-language-functions-reference#binary"
+							data-linktype="relative-path">binary</a></td>
+					<td>Return the binary version for an input value.</td>
+				</tr>
+				<tr>
+					<td><a href="https://learn.microsoft.com/en-gb/azure/logic-apps/workflow-definition-language-functions-reference#bool"
+							data-linktype="relative-path">bool</a></td>
+					<td>Return the Boolean version for an input value.</td>
+				</tr>
+				<tr>
+					<td><a href="https://learn.microsoft.com/en-gb/azure/logic-apps/workflow-definition-language-functions-reference#createArray"
+							data-linktype="relative-path">createArray</a></td>
+					<td>Return an array from multiple inputs.</td>
+				</tr>
+				<tr>
+					<td><a href="https://learn.microsoft.com/en-gb/azure/logic-apps/workflow-definition-language-functions-reference#dataUri"
+							data-linktype="relative-path">dataUri</a></td>
+					<td>Return the data URI for an input value.</td>
+				</tr>
+				<tr>
+					<td><a href="https://learn.microsoft.com/en-gb/azure/logic-apps/workflow-definition-language-functions-reference#dataUriToBinary"
+							data-linktype="relative-path">dataUriToBinary</a></td>
+					<td>Return the binary version for a data URI.</td>
+				</tr>
+				<tr>
+					<td><a href="https://learn.microsoft.com/en-gb/azure/logic-apps/workflow-definition-language-functions-reference#dataUriToString"
+							data-linktype="relative-path">dataUriToString</a></td>
+					<td>Return the string version for a data URI.</td>
+				</tr>
+				<tr>
+					<td><a href="https://learn.microsoft.com/en-gb/azure/logic-apps/workflow-definition-language-functions-reference#decimal"
+							data-linktype="relative-path">decimal</a></td>
+					<td>Return the decimal number for a decimal string.</td>
+				</tr>
+				<tr>
+					<td><a href="https://learn.microsoft.com/en-gb/azure/logic-apps/workflow-definition-language-functions-reference#decodeBase64"
+							data-linktype="relative-path">decodeBase64</a></td>
+					<td>Return the string version for a base64-encoded string.</td>
+				</tr>
+				<tr>
+					<td><a href="https://learn.microsoft.com/en-gb/azure/logic-apps/workflow-definition-language-functions-reference#decodeDataUri"
+							data-linktype="relative-path">decodeDataUri</a></td>
+					<td>Return the binary version for a data URI.</td>
+				</tr>
+				<tr>
+					<td><a href="https://learn.microsoft.com/en-gb/azure/logic-apps/workflow-definition-language-functions-reference#decodeUriComponent"
+							data-linktype="relative-path">decodeUriComponent</a></td>
+					<td>Return a string that replaces escape characters with decoded versions.</td>
+				</tr>
+				<tr>
+					<td><a href="https://learn.microsoft.com/en-gb/azure/logic-apps/workflow-definition-language-functions-reference#encodeUriComponent"
+							data-linktype="relative-path">encodeUriComponent</a></td>
+					<td>Return a string that replaces URL-unsafe characters with escape characters.</td>
+				</tr>
+				<tr>
+					<td><a href="https://learn.microsoft.com/en-gb/azure/logic-apps/workflow-definition-language-functions-reference#float"
+							data-linktype="relative-path">float</a></td>
+					<td>Return a floating point number for an input value.</td>
+				</tr>
+				<tr>
+					<td><a href="https://learn.microsoft.com/en-gb/azure/logic-apps/workflow-definition-language-functions-reference#int"
+							data-linktype="relative-path">int</a></td>
+					<td>Return the integer version for a string.</td>
+				</tr>
+				<tr>
+					<td><a href="https://learn.microsoft.com/en-gb/azure/logic-apps/workflow-definition-language-functions-reference#json"
+							data-linktype="relative-path">json</a></td>
+					<td>Return the JavaScript Object Notation (JSON) type value or object for a string or XML.</td>
+				</tr>
+				<tr>
+					<td><a href="https://learn.microsoft.com/en-gb/azure/logic-apps/workflow-definition-language-functions-reference#string"
+							data-linktype="relative-path">string</a></td>
+					<td>Return the string version for an input value.</td>
+				</tr>
+				<tr>
+					<td><a href="https://learn.microsoft.com/en-gb/azure/logic-apps/workflow-definition-language-functions-reference#uriComponent"
+							data-linktype="relative-path">uriComponent</a></td>
+					<td>Return the URI-encoded version for an input value by replacing URL-unsafe characters with escape
+						characters.</td>
+				</tr>
+				<tr>
+					<td><a href="https://learn.microsoft.com/en-gb/azure/logic-apps/workflow-definition-language-functions-reference#uriComponentToBinary"
+							data-linktype="relative-path">uriComponentToBinary</a></td>
+					<td>Return the binary version for a URI-encoded string.</td>
+				</tr>
+				<tr>
+					<td><a href="https://learn.microsoft.com/en-gb/azure/logic-apps/workflow-definition-language-functions-reference#uriComponentToString"
+							data-linktype="relative-path">uriComponentToString</a></td>
+					<td>Return the string version for a URI-encoded string.</td>
+				</tr>
+				<tr>
+					<td><a href="https://learn.microsoft.com/en-gb/azure/logic-apps/workflow-definition-language-functions-reference#xml"
+							data-linktype="relative-path">xml</a></td>
+					<td>Return the XML version for a string.</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<p><a name="implicit-data-conversions"></a></p>
+
+		<table aria-label="Table 7" class="table table-sm margin-top-none">
+			<thead>
+				<tr>
+					<th>Math function</th>
+					<th style="width:80%">Task</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td><a href="https://learn.microsoft.com/en-gb/azure/logic-apps/workflow-definition-language-functions-reference#add"
+							data-linktype="relative-path">add</a></td>
+					<td>Return the result from adding two numbers.</td>
+				</tr>
+				<tr>
+					<td><a href="https://learn.microsoft.com/en-gb/azure/logic-apps/workflow-definition-language-functions-reference#div"
+							data-linktype="relative-path">div</a></td>
+					<td>Return the result from dividing two numbers.</td>
+				</tr>
+				<tr>
+					<td><a href="https://learn.microsoft.com/en-gb/azure/logic-apps/workflow-definition-language-functions-reference#max"
+							data-linktype="relative-path">max</a></td>
+					<td>Return the highest value from a set of numbers or an array.</td>
+				</tr>
+				<tr>
+					<td><a href="https://learn.microsoft.com/en-gb/azure/logic-apps/workflow-definition-language-functions-reference#min"
+							data-linktype="relative-path">min</a></td>
+					<td>Return the lowest value from a set of numbers or an array.</td>
+				</tr>
+				<tr>
+					<td><a href="https://learn.microsoft.com/en-gb/azure/logic-apps/workflow-definition-language-functions-reference#mod"
+							data-linktype="relative-path">mod</a></td>
+					<td>Return the remainder from dividing two numbers.</td>
+				</tr>
+				<tr>
+					<td><a href="https://learn.microsoft.com/en-gb/azure/logic-apps/workflow-definition-language-functions-reference#mul"
+							data-linktype="relative-path">mul</a></td>
+					<td>Return the product from multiplying two numbers.</td>
+				</tr>
+				<tr>
+					<td><a href="https://learn.microsoft.com/en-gb/azure/logic-apps/workflow-definition-language-functions-reference#rand"
+							data-linktype="relative-path">rand</a></td>
+					<td>Return a random integer from a specified range.</td>
+				</tr>
+				<tr>
+					<td><a href="https://learn.microsoft.com/en-gb/azure/logic-apps/workflow-definition-language-functions-reference#range"
+							data-linktype="relative-path">range</a></td>
+					<td>Return an integer array that starts from a specified integer.</td>
+				</tr>
+				<tr>
+					<td><a href="https://learn.microsoft.com/en-gb/azure/logic-apps/workflow-definition-language-functions-reference#sub"
+							data-linktype="relative-path">sub</a></td>
+					<td>Return the result from subtracting the second number from the first number.</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<p><a name="date-time-functions"></a></p>
+		<table aria-label="Table 8" class="table table-sm margin-top-none">
+			<thead>
+				<tr>
+					<th>Date or time function</th>
+					<th style="width:80%">Task</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td><a href="https://learn.microsoft.com/en-gb/azure/logic-apps/workflow-definition-language-functions-reference#addDays"
+							data-linktype="relative-path">addDays</a></td>
+					<td>Add days to a timestamp.</td>
+				</tr>
+				<tr>
+					<td><a href="https://learn.microsoft.com/en-gb/azure/logic-apps/workflow-definition-language-functions-reference#addHours"
+							data-linktype="relative-path">addHours</a></td>
+					<td>Add hours to a timestamp.</td>
+				</tr>
+				<tr>
+					<td><a href="https://learn.microsoft.com/en-gb/azure/logic-apps/workflow-definition-language-functions-reference#addMinutes"
+							data-linktype="relative-path">addMinutes</a></td>
+					<td>Add minutes to a timestamp.</td>
+				</tr>
+				<tr>
+					<td><a href="https://learn.microsoft.com/en-gb/azure/logic-apps/workflow-definition-language-functions-reference#addSeconds"
+							data-linktype="relative-path">addSeconds</a></td>
+					<td>Add seconds to a timestamp.</td>
+				</tr>
+				<tr>
+					<td><a href="https://learn.microsoft.com/en-gb/azure/logic-apps/workflow-definition-language-functions-reference#addToTime"
+							data-linktype="relative-path">addToTime</a></td>
+					<td>Add specified time units to a timestamp. See also <a
+							href="https://learn.microsoft.com/en-gb/azure/logic-apps/workflow-definition-language-functions-reference#getFutureTime"
+							data-linktype="relative-path">getFutureTime</a>.</td>
+				</tr>
+				<tr>
+					<td><a href="https://learn.microsoft.com/en-gb/azure/logic-apps/workflow-definition-language-functions-reference#convertFromUtc"
+							data-linktype="relative-path">convertFromUtc</a></td>
+					<td>Convert a timestamp from Universal Time Coordinated (UTC) to the target time zone.</td>
+				</tr>
+				<tr>
+					<td><a href="https://learn.microsoft.com/en-gb/azure/logic-apps/workflow-definition-language-functions-reference#convertTimeZone"
+							data-linktype="relative-path">convertTimeZone</a></td>
+					<td>Convert a timestamp from the source time zone to the target time zone.</td>
+				</tr>
+				<tr>
+					<td><a href="https://learn.microsoft.com/en-gb/azure/logic-apps/workflow-definition-language-functions-reference#convertToUtc"
+							data-linktype="relative-path">convertToUtc</a></td>
+					<td>Convert a timestamp from the source time zone to Universal Time Coordinated (UTC).</td>
+				</tr>
+				<tr>
+					<td><a href="https://learn.microsoft.com/en-gb/azure/logic-apps/workflow-definition-language-functions-reference#dateDifference"
+							data-linktype="relative-path">dateDifference</a></td>
+					<td>Return the difference between two dates as a timespan.</td>
+				</tr>
+				<tr>
+					<td><a href="https://learn.microsoft.com/en-gb/azure/logic-apps/workflow-definition-language-functions-reference#dayOfMonth"
+							data-linktype="relative-path">dayOfMonth</a></td>
+					<td>Return the day of the month component from a timestamp.</td>
+				</tr>
+				<tr>
+					<td><a href="https://learn.microsoft.com/en-gb/azure/logic-apps/workflow-definition-language-functions-reference#dayOfWeek"
+							data-linktype="relative-path">dayOfWeek</a></td>
+					<td>Return the day of the week component from a timestamp.</td>
+				</tr>
+				<tr>
+					<td><a href="https://learn.microsoft.com/en-gb/azure/logic-apps/workflow-definition-language-functions-reference#dayOfYear"
+							data-linktype="relative-path">dayOfYear</a></td>
+					<td>Return the day of the year component from a timestamp.</td>
+				</tr>
+				<tr>
+					<td><a href="https://learn.microsoft.com/en-gb/azure/logic-apps/workflow-definition-language-functions-reference#formatDateTime"
+							data-linktype="relative-path">formatDateTime</a></td>
+					<td>Return the date from a timestamp.</td>
+				</tr>
+				<tr>
+					<td><a href="https://learn.microsoft.com/en-gb/azure/logic-apps/workflow-definition-language-functions-reference#getFutureTime"
+							data-linktype="relative-path">getFutureTime</a></td>
+					<td>Return the current timestamp plus the specified time units. See also <a
+							href="https://learn.microsoft.com/en-gb/azure/logic-apps/workflow-definition-language-functions-reference#addToTime"
+							data-linktype="relative-path">addToTime</a>.</td>
+				</tr>
+				<tr>
+					<td><a href="https://learn.microsoft.com/en-gb/azure/logic-apps/workflow-definition-language-functions-reference#getPastTime"
+							data-linktype="relative-path">getPastTime</a></td>
+					<td>Return the current timestamp minus the specified time units. See also <a
+							href="https://learn.microsoft.com/en-gb/azure/logic-apps/workflow-definition-language-functions-reference#subtractFromTime"
+							data-linktype="relative-path">subtractFromTime</a>.</td>
+				</tr>
+				<tr>
+					<td><a href="https://learn.microsoft.com/en-gb/azure/logic-apps/workflow-definition-language-functions-reference#parseDateTime"
+							data-linktype="relative-path">parseDateTime</a></td>
+					<td>Return the timestamp from a string that contains a timestamp.</td>
+				</tr>
+				<tr>
+					<td><a href="https://learn.microsoft.com/en-gb/azure/logic-apps/workflow-definition-language-functions-reference#startOfDay"
+							data-linktype="relative-path">startOfDay</a></td>
+					<td>Return the start of the day for a timestamp.</td>
+				</tr>
+				<tr>
+					<td><a href="https://learn.microsoft.com/en-gb/azure/logic-apps/workflow-definition-language-functions-reference#startOfHour"
+							data-linktype="relative-path">startOfHour</a></td>
+					<td>Return the start of the hour for a timestamp.</td>
+				</tr>
+				<tr>
+					<td><a href="https://learn.microsoft.com/en-gb/azure/logic-apps/workflow-definition-language-functions-reference#startOfMonth"
+							data-linktype="relative-path">startOfMonth</a></td>
+					<td>Return the start of the month for a timestamp.</td>
+				</tr>
+				<tr>
+					<td><a href="https://learn.microsoft.com/en-gb/azure/logic-apps/workflow-definition-language-functions-reference#subtractFromTime"
+							data-linktype="relative-path">subtractFromTime</a></td>
+					<td>Subtract a number of time units from a timestamp. See also <a
+							href="https://learn.microsoft.com/en-gb/azure/logic-apps/workflow-definition-language-functions-reference#getPastTime"
+							data-linktype="relative-path">getPastTime</a>.</td>
+				</tr>
+				<tr>
+					<td><a href="https://learn.microsoft.com/en-gb/azure/logic-apps/workflow-definition-language-functions-reference#ticks"
+							data-linktype="relative-path">ticks</a></td>
+					<td>Return the <code>ticks</code> property value for a specified timestamp.</td>
+				</tr>
+				<tr>
+					<td><a href="https://learn.microsoft.com/en-gb/azure/logic-apps/workflow-definition-language-functions-reference#utcNow"
+							data-linktype="relative-path">utcNow</a></td>
+					<td>Return the current timestamp as a string.</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<p><a name="workflow-referencing"></a></p>
+
+		<table aria-label="Table 9" class="table table-sm margin-top-none">
+			<thead>
+				<tr>
+					<th>Referencing function</th>
+					<th style="width:80%">Task</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td><a href="https://learn.microsoft.com/en-gb/azure/logic-apps/workflow-definition-language-functions-reference#parameters"
+							data-linktype="relative-path">parameters</a></td>
+					<td>Return a parameter value that is in the definition.</td>
+				</tr>
+				<tr>
+					<td><a href="https://learn.microsoft.com/en-gb/azure/logic-apps/workflow-definition-language-functions-reference#result"
+							data-linktype="relative-path">result</a></td>
+					<td>Return the results from the top-level actions in the specified scoped action, such as a
+						For_each,
+						Until, or Scope action.</td>
+				</tr>
+				<tr>
+					<td><a href="https://learn.microsoft.com/en-gb/azure/logic-apps/workflow-definition-language-functions-reference#actions"
+							data-linktype="relative-path">actions</a></td>
+					<td>Return a actions value from other JSON name and value pairs or the output of the runtime action.
+					</td>
+				</tr>
+				<tr>
+					<td><a href="https://learn.microsoft.com/en-gb/azure/logic-apps/workflow-definition-language-functions-reference#outputs"
+							data-linktype="relative-path">outputs</a></td>
+					<td>Return a actions value from the JSON value (same as actions()?['outputs']).</td>
+				</tr>
+				<tr>
+					<td><a href="https://learn.microsoft.com/en-gb/azure/logic-apps/workflow-definition-language-functions-reference#body"
+							data-linktype="relative-path">body</a></td>
+					<td>Return a actions values body from the JSON value (same as actions()?['outputs']?['body']).</td>
+				</tr>
+				<tr>
+					<td><a href="https://learn.microsoft.com/en-gb/azure/logic-apps/workflow-definition-language-functions-reference#trigger"
+							data-linktype="relative-path">trigger</a></td>
+					<td>Return the trigger value from other JSON name and value pairs or the output of the runtime
+						action.
+					</td>
+				</tr>
+				<tr>
+					<td><a href="https://learn.microsoft.com/en-gb/azure/logic-apps/workflow-definition-language-functions-reference#triggeroutputs"
+							data-linktype="relative-path">triggerOutputs</a></td>
+					<td>Return the trigger value from the JSON value (same as trigger()?['outputs'])</td>
+				</tr>
+				<tr>
+					<td><a href="https://learn.microsoft.com/en-gb/azure/logic-apps/workflow-definition-language-functions-reference#triggerbody"
+							data-linktype="relative-path">triggerBody</a></td>
+					<td>Return the trigger values body from the JSON value (same as trigger()?['outputs']?['body'])</td>
+				</tr>
+				<tr>
+					<td><a href="https://learn.microsoft.com/en-gb/azure/logic-apps/workflow-definition-language-functions-reference#item"
+							data-linktype="relative-path">item</a></td>
+					<td>Return the key of a record when used in a repeating action (like create csv table).</td>
+				</tr>
+				<tr>
+					<td><a href="https://learn.microsoft.com/en-gb/azure/logic-apps/workflow-definition-language-functions-reference#items"
+							data-linktype="relative-path">items</a></td>
+					<td>Return the current record inside a loop (Like apply to each).</td>
+				</tr>
+				<tr>
+					<td><a href="https://learn.microsoft.com/en-gb/azure/logic-apps/workflow-definition-language-functions-reference#iterationIndexes"
+							data-linktype="relative-path">iterationIndexes</a></td>
+					<td>Return the current iteration inside a Do until loop (same as a counter).</td>
+				</tr>
+				<tr>
+					<td><a href="https://learn.microsoft.com/en-gb/azure/logic-apps/workflow-definition-language-functions-reference#variables"
+							data-linktype="relative-path">variables</a></td>
+					<td>Return a local variable.</td>
+				</tr>
+			</tbody>
+		</table>
+
+
+		<p><a name="workflow-functions"></a></p>
+		<table aria-label="Table 10" class="table table-sm margin-top-none">
+			<thead>
+				<tr>
+					<th>Workflow function</th>
+					<th style="width:80%">Task</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td><a href="https://learn.microsoft.com/en-gb/azure/logic-apps/workflow-definition-language-functions-reference#action"
+							data-linktype="relative-path">action</a></td>
+					<td>Return the current action's output at runtime, or values from other JSON name-and-value pairs.
+						See
+						also <a
+							href="https://learn.microsoft.com/en-gb/azure/logic-apps/workflow-definition-language-functions-reference#actions"
+							data-linktype="relative-path">actions</a>.</td>
+				</tr>
+				<tr>
+					<td><a href="https://learn.microsoft.com/en-gb/azure/logic-apps/workflow-definition-language-functions-reference#actions"
+							data-linktype="relative-path">actions</a></td>
+					<td>Return an action's output at runtime, or values from other JSON name-and-value pairs. See also
+						<a href="https://learn.microsoft.com/en-gb/azure/logic-apps/workflow-definition-language-functions-reference#action"
+							data-linktype="relative-path">action</a>.</td>
+				</tr>
+				<tr>
+					<td><a href="#body" data-linktype="self-bookmark">body</a></td>
+					<td>Return an action's <code>body</code> output at runtime.</td>
+				</tr>
+				<tr>
+					<td><a href="https://learn.microsoft.com/en-gb/azure/logic-apps/workflow-definition-language-functions-reference#formDataMultiValues"
+							data-linktype="relative-path">formDataMultiValues</a></td>
+					<td>Create an array with the values that match a key name in <em>form-data</em> or
+						<em>form-encoded</em>
+						action outputs.</td>
+				</tr>
+				<tr>
+					<td><a href="https://learn.microsoft.com/en-gb/azure/logic-apps/workflow-definition-language-functions-reference#formDataValue"
+							data-linktype="relative-path">formDataValue</a></td>
+					<td>Return a single value that matches a key name in an action's <em>form-data</em> or
+						<em>form-encoded
+							output</em>.</td>
+				</tr>
+				<tr>
+					<td><a href="https://learn.microsoft.com/en-gb/azure/logic-apps/workflow-definition-language-functions-reference#item"
+							data-linktype="relative-path">item</a></td>
+					<td>If this function appears inside a repeating action over an array, return the current item in the
+						array during the action's current iteration.</td>
+				</tr>
+				<tr>
+					<td><a href="https://learn.microsoft.com/en-gb/azure/logic-apps/workflow-definition-language-functions-reference#items"
+							data-linktype="relative-path">items</a></td>
+					<td>If this function appears inside a Foreach or Until loop, return the current item from the
+						specified
+						loop.</td>
+				</tr>
+				<tr>
+					<td><a href="https://learn.microsoft.com/en-gb/azure/logic-apps/workflow-definition-language-functions-reference#iterationIndexes"
+							data-linktype="relative-path">iterationIndexes</a></td>
+					<td>If this function appears inside an Until loop, return the index value for the current iteration.
+						You
+						can use this function inside nested Until loops.</td>
+				</tr>
+				<tr>
+					<td><a href="https://learn.microsoft.com/en-gb/azure/logic-apps/workflow-definition-language-functions-reference#listCallbackUrl"
+							data-linktype="relative-path">listCallbackUrl</a></td>
+					<td>Return the "callback URL" that calls a trigger or action.</td>
+				</tr>
+				<tr>
+					<td><a href="https://learn.microsoft.com/en-gb/azure/logic-apps/workflow-definition-language-functions-reference#multipartBody"
+							data-linktype="relative-path">multipartBody</a></td>
+					<td>Return the body for a specific part in an action's output that has multiple parts.</td>
+				</tr>
+				<tr>
+					<td><a href="https://learn.microsoft.com/en-gb/azure/logic-apps/workflow-definition-language-functions-reference#outputs"
+							data-linktype="relative-path">outputs</a></td>
+					<td>Return an action's output at runtime.</td>
+				</tr>
+				<tr>
+					<td><a href="https://learn.microsoft.com/en-gb/azure/logic-apps/workflow-definition-language-functions-reference#parameters"
+							data-linktype="relative-path">parameters</a></td>
+					<td>Return the value for a parameter that is described in your workflow definition.</td>
+				</tr>
+				<tr>
+					<td><a href="https://learn.microsoft.com/en-gb/azure/logic-apps/workflow-definition-language-functions-reference#result"
+							data-linktype="relative-path">result</a></td>
+					<td>Return the inputs and outputs from the top-level actions inside the specified scoped action,
+						such as
+						<code>For_each</code>, <code>Until</code>, and <code>Scope</code>.
+					</td>
+				</tr>
+				<tr>
+					<td><a href="https://learn.microsoft.com/en-gb/azure/logic-apps/workflow-definition-language-functions-reference#trigger"
+							data-linktype="relative-path">trigger</a></td>
+					<td>Return a trigger's output at runtime, or from other JSON name-and-value pairs. See also <a
+							href="#triggerOutputs" data-linktype="self-bookmark">triggerOutputs</a> and <a
+							href="https://learn.microsoft.com/en-gb/azure/logic-apps/workflow-definition-language-functions-reference#triggerBody"
+							data-linktype="relative-path">triggerBody</a>.</td>
+				</tr>
+				<tr>
+					<td><a href="https://learn.microsoft.com/en-gb/azure/logic-apps/workflow-definition-language-functions-reference#triggerBody"
+							data-linktype="relative-path">triggerBody</a></td>
+					<td>Return a trigger's <code>body</code> output at runtime. See <a
+							href="https://learn.microsoft.com/en-gb/azure/logic-apps/workflow-definition-language-functions-reference#trigger"
+							data-linktype="relative-path">trigger</a>.</td>
+				</tr>
+				<tr>
+					<td><a href="https://learn.microsoft.com/en-gb/azure/logic-apps/workflow-definition-language-functions-reference#triggerFormDataValue"
+							data-linktype="relative-path">triggerFormDataValue</a></td>
+					<td>Return a single value matching a key name in <em>form-data</em> or <em>form-encoded</em> trigger
+						outputs.</td>
+				</tr>
+				<tr>
+					<td><a href="https://learn.microsoft.com/en-gb/azure/logic-apps/workflow-definition-language-functions-reference#triggerMultipartBody"
+							data-linktype="relative-path">triggerMultipartBody</a></td>
+					<td>Return the body for a specific part in a trigger's multipart output.</td>
+				</tr>
+				<tr>
+					<td><a href="https://learn.microsoft.com/en-gb/azure/logic-apps/workflow-definition-language-functions-reference#triggerFormDataMultiValues"
+							data-linktype="relative-path">triggerFormDataMultiValues</a></td>
+					<td>Create an array whose values match a key name in <em>form-data</em> or <em>form-encoded</em>
+						trigger
+						outputs.</td>
+				</tr>
+				<tr>
+					<td><a href="https://learn.microsoft.com/en-gb/azure/logic-apps/workflow-definition-language-functions-reference#triggerOutputs"
+							data-linktype="relative-path">triggerOutputs</a></td>
+					<td>Return a trigger's output at runtime, or values from other JSON name-and-value pairs. See <a
+							href="https://learn.microsoft.com/en-gb/azure/logic-apps/workflow-definition-language-functions-reference#trigger"
+							data-linktype="relative-path">trigger</a>.</td>
+				</tr>
+				<tr>
+					<td><a href="https://learn.microsoft.com/en-gb/azure/logic-apps/workflow-definition-language-functions-reference#variables"
+							data-linktype="relative-path">variables</a></td>
+					<td>Return the value for a specified variable.</td>
+				</tr>
+				<tr>
+					<td><a href="https://learn.microsoft.com/en-gb/azure/logic-apps/workflow-definition-language-functions-reference#workflow"
+							data-linktype="relative-path">workflow</a></td>
+					<td>Return all the details about the workflow itself during run time.</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<p><a name="uri-parsing-functions"></a></p>
+		<table aria-label="Table 11" class="table table-sm margin-top-none">
+			<thead>
+				<tr>
+					<th>URI parsing function</th>
+					<th style="width:80%">Task</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td><a href="https://learn.microsoft.com/en-gb/azure/logic-apps/workflow-definition-language-functions-reference#uriHost"
+							data-linktype="relative-path">uriHost</a></td>
+					<td>Return the <code>host</code> value for a uniform resource identifier (URI).</td>
+				</tr>
+				<tr>
+					<td><a href="https://learn.microsoft.com/en-gb/azure/logic-apps/workflow-definition-language-functions-reference#uriPath"
+							data-linktype="relative-path">uriPath</a></td>
+					<td>Return the <code>path</code> value for a uniform resource identifier (URI).</td>
+				</tr>
+				<tr>
+					<td><a href="https://learn.microsoft.com/en-gb/azure/logic-apps/workflow-definition-language-functions-reference#uriPathAndQuery"
+							data-linktype="relative-path">uriPathAndQuery</a></td>
+					<td>Return the <code>path</code> and <code>query</code> values for a uniform resource identifier
+						(URI).
+					</td>
+				</tr>
+				<tr>
+					<td><a href="https://learn.microsoft.com/en-gb/azure/logic-apps/workflow-definition-language-functions-reference#uriPort"
+							data-linktype="relative-path">uriPort</a></td>
+					<td>Return the <code>port</code> value for a uniform resource identifier (URI).</td>
+				</tr>
+				<tr>
+					<td><a href="https://learn.microsoft.com/en-gb/azure/logic-apps/workflow-definition-language-functions-reference#uriQuery"
+							data-linktype="relative-path">uriQuery</a></td>
+					<td>Return the <code>query</code> value for a uniform resource identifier (URI).</td>
+				</tr>
+				<tr>
+					<td><a href="https://learn.microsoft.com/en-gb/azure/logic-apps/workflow-definition-language-functions-reference#uriScheme"
+							data-linktype="relative-path">uriScheme</a></td>
+					<td>Return the <code>scheme</code> value for a uniform resource identifier (URI).</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<p><a name="manipulation-functions"></a></p>
+		<table aria-label="Table 12" class="table table-sm margin-top-none">
+			<thead>
+				<tr>
+					<th>Manipulation function</th>
+					<th style="width:80%">Task</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td><a href="https://learn.microsoft.com/en-gb/azure/logic-apps/workflow-definition-language-functions-reference#addProperty"
+							data-linktype="relative-path">addProperty</a></td>
+					<td>Add a property and its value, or name-value pair, to a JSON object, and return the updated
+						object.
+					</td>
+				</tr>
+				<tr>
+					<td><a href="https://learn.microsoft.com/en-gb/azure/logic-apps/workflow-definition-language-functions-reference#coalesce"
+							data-linktype="relative-path">coalesce</a></td>
+					<td>Return the first non-null value from one or more parameters.</td>
+				</tr>
+				<tr>
+					<td><a href="https://learn.microsoft.com/en-gb/azure/logic-apps/workflow-definition-language-functions-reference#removeProperty"
+							data-linktype="relative-path">removeProperty</a></td>
+					<td>Remove a property from a JSON object and return the updated object.</td>
+				</tr>
+				<tr>
+					<td><a href="https://learn.microsoft.com/en-gb/azure/logic-apps/workflow-definition-language-functions-reference#setProperty"
+							data-linktype="relative-path">setProperty</a></td>
+					<td>Set the value for a JSON object's property and return the updated object.</td>
+				</tr>
+				<tr>
+					<td><a href="https://learn.microsoft.com/en-gb/azure/logic-apps/workflow-definition-language-functions-reference#xpath"
+							data-linktype="relative-path">xpath</a></td>
+					<td>Check XML for nodes or values that match an XPath (XML Path Language) expression, and return the
+						matching nodes or values.</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<div style="text-align: center; padding-bottom: 40px;"><a href="../assets/Power Automate Expressions.xlsx" download style="color:white">Excel Version</a></div>
+	<div style="text-align: center; padding-bottom: 40px;"><a class="footer" href="https://dev.to/wyattdave">By WyattDave</a><img src="https://powerdevbox.com/images/dev.to.png" style="height:20px"/></div>
+</body>
+
+</html>

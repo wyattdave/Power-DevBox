@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://powerdevbox.com/apple-touch-icon.png">
+    <meta name="author" content="WyattDave">
+    <meta name="description" content="Dataverse Token for Power Platform">
+    <link rel="shortcut icon" href="https://powerdevbox.com/favicon.png">
+    <title>Dataverse Token</title>
+    <style>
+        body {
+            background-color: #3f3f3f;
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        #authForm {
+            background-color: #4f4f4f;
+            padding: 20px;
+            border-radius: 8px;
+            width:25%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        label, input, button {
+            display: block;
+            margin-bottom: 15px;
+        }
+        input, button {
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            width: 100%; 
+         
+            box-sizing: border-box; 
+        }
+        input {
+            background-color: #6f6f6f;
+            color: white;
+        }
+        button {
+            background-color: #0078d4;
+            color: white;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #005a9e;
+        }
+        #icon{
+            width:30px
+        }
+        a{
+            color:grey
+        }
+    </style>
+</head>
+<body>
+    <form id="authForm">
+        <h2>Dataverse Token Generator</h2>
+        <br>
+        <label for="tenantId">Tenant ID:</label>
+        <input type="text" id="tenantId" name="tenantId" required>
+        <label for="resource">Resource:</label>
+        <input type="text" id="resource" name="resource" required>
+        <button type="button" id="myButton">Get Token</button>
+        <br>
+        <span><a href="https://powredevbox.com"><img id="icon" alt="Icon" src="https://powerdevbox.com/images/power devbox grey.png"/>By Power DevBox</a></span>
+    </form>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+
+            const regex = /access_token=([^&]+)/;
+            const match = window.location.href.match(regex);
+
+            if (match) {
+                console.log(match[1]);
+                    navigator.clipboard.writeText(match[1]).then(() => {
+                    alert("Access token copied to clipboard.");
+                }).catch(err => {
+                    alert("Failed to copy access token to clipboard: ", err);
+                }); // Extracted access_token
+            } else {
+                console.log("No access_token found");
+            }
+            const tenantIdInput = document.getElementById('tenantId');
+            const resourceInput = document.getElementById('resource');
+            const button = document.getElementById('myButton');
+        
+            // Prepopulate input fields if values exist in localStorage
+            const savedTenantId = localStorage.getItem('tenantId');
+            const savedResource = localStorage.getItem('resource');
+            if (savedTenantId) {
+                tenantIdInput.value = savedTenantId;
+            }
+            if (savedResource) {
+                resourceInput.value = savedResource;
+            }
+        
+            button.addEventListener('click', function() {
+                // Save input values to localStorage
+                localStorage.setItem('tenantId', tenantIdInput.value);
+                localStorage.setItem('resource', resourceInput.value);
+        
+                // Call the getToken function
+                getToken();
+            });
+        });
+        
+        function getToken() {
+            const clientId = '51f81489-12ee-4a9e-aaae-a2591f45987d';
+            const tenantId = document.getElementById('tenantId').value;
+            const resource = document.getElementById('resource').value;
+            const redirectUri = 'http://localhost:5500/';
+        
+            if (!tenantId || !resource) {
+                alert('Please fill in both Tenant ID and Resource.');
+                return;
+            }
+        
+            const authUrl = `https://login.microsoftonline.com/${tenantId}/oauth2/v2.0/authorize` +
+                `?client_id=${clientId}` +
+                `&response_type=token` +
+                `&redirect_uri=${encodeURIComponent(redirectUri)}` +
+                `&scope=${encodeURIComponent(resource + '/.default')}` +
+                `&response_mode=fragment`;
+          window.location.href = authUrl;
+          
+        }
+    </script>
+</body>
+</html>

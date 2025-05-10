@@ -1,14 +1,13 @@
+
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="wyattdave">
-    <link rel="shortcut icon" href="favicon.png">
-    <meta name="description" content="Developer Tools for Power Platform" />
-    <meta name="keywords" content="power automate, power apps, power platform, flows, low code, wyattdave,autoreview,appreview,flow utilizer"/>
-    <title>Copilot Studio Agent Generator</title>
-    <style>
+  <html>
+    <head>
+  		<title>Power DevBox Exception Guide</title>
+  			<meta charset="UTF-8" />
+  			<meta http-equiv="refresh" content="0; URL=subs/agent generator.html" />
+            <link rel="shortcut icon" href="favicon.png">
+        </head>
+        <style>
         body {
             font-family: 'Roboto', sans-serif;
             background-color: #3f3f3f;
@@ -20,134 +19,8 @@
             margin: 0;
             flex-direction: column;
         }
-        form {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 10px;
-            width: 100%;
-            max-width: 640px;
-            justify-items: center;
-        }
-        input, textarea, button, label {
-            padding: 10px;
-            width: 100%;
-            box-sizing: border-box;
-            border-radius: 10px;
-        }
-        textarea {
-            height: 80px;
-            resize: vertical;
-        }
-        button, label {
-            background-color: white;
-            color: #3f3f3f;
-            border: none;
-            cursor: pointer;
-            text-align: center;
-        }
-        input[type="file"] {
-            display: none;
-        }
-        .icon {
-            width: 100px;
-        }
-        .full-width {
-            grid-column: span 2;
-        }
-        a {
-            color: white;
-            text-align: center;
-        }
-        @media (max-width: 700px) {
-            form {
-                grid-template-columns: 1fr;
-                padding: 20px;
-                width: calc(100% - 40px);
-                justify-items: center;
-            }
-            button, label {
-                grid-column: span 1;
-                min-width: 200px;
-            }
-        }
-        .full-width {
-            grid-column: span 1;
-        }
-    </style>
-</head>
-<body>
-    <img src="images/copilot studio stencil.svg" alt="logo" class="icon">
-    <h1>COpilot Studio Agent Generator</h1>
-    <form id="agentForm">
-        <input type="text" id="name" placeholder="Name" value="Daves Blogs Agent">
-        <input type="text" id="description" placeholder="Description" value="This is an agent curated based on the content from David Wyatts Blogs.">
-        <input type="text" id="instructions" placeholder="Instructions" value="Provide helpful, accurate, and relevant information while speaking in a posh british accent.">
-        <input type="text" id="welcomeMessage" placeholder="Welcome Message" value="Welcome! Learn all about the Power Platform.">
-        <textarea id="conversationStarters" placeholder="Conversation Starters (comma separated)">What is the most recent blog, What are the featured blog</textarea>
-        <textarea id="sites" placeholder="Sites (comma separated)">https://dev.to/wyattdave,https://powerdevbox.com/blog.html</textarea>
-        <label for="icon" class="full-width">Select Image</label>
-        <input type="file" id="icon" accept="image/*" class="full-width">
-        <button type="button" class="full-width" onclick="generateJSON()">Generate Agent File</button>
-        <button type="button" class="full-width" onclick="clearForm()">Clear</button>
-    </form>
-    <br>
-    <a href="https://dev.to/wyattdave/copilot-studio-agents-the-new-excel-37eb">Created by David Wyatt - check out the related blog </a>
-    <script>
-        function generateJSON() {
-            const conversationStarters = document.getElementById('conversationStarters').value.split(',').map(text => ({ text: text.trim() }));
-            const welcomeMessage = document.getElementById('welcomeMessage').value;
-            const capabilityName = "WebSearch";
-            const sites = document.getElementById('sites').value.split(',').map(url => ({ url: url.trim() }));
-            const description = document.getElementById('description').value;
-            const instructions = document.getElementById('instructions').value;
-            const name = document.getElementById('name').value;
-            const iconFile = document.getElementById('icon').files[0];
-
-            const reader = new FileReader();
-            reader.onload = function(event) {
-                const iconBase64 = event.target.result;
-
-                const json = {
-                    customCopilotConfig: {
-                        conversationStarters: {
-                            conversationStarterList: conversationStarters,
-                            welcomeMessage: { text: welcomeMessage }
-                        },
-                        gptDefinition: {
-                            capabilities: [
-                                {
-                                    name: capabilityName,
-                                    sites: sites
-                                }
-                            ],
-                            description: description,
-                            instructions: instructions,
-                            name: name
-                        },
-                        icon: iconBase64
-                    },
-                    schemaVersion: "0.2.0"
-                };
-
-                const blob = new Blob([JSON.stringify(json, null, 2)], { type: 'application/json' });
-                const url = URL.createObjectURL(blob);
-                const a = document.createElement('a');
-                a.href = url;
-                a.download = name + '.json';
-                a.click();
-                URL.revokeObjectURL(url);
-            };
-
-            if (iconFile) {
-                reader.readAsDataURL(iconFile);
-            } else {
-                alert('Please upload an icon image.');
-            }
-        }
-
-        function clearForm() {
-            document.getElementById('agentForm').reset();
-        }
-    </script>
-</body>
-</html>
+        </style>
+  	<body>
+  		<p>Moved to <a href="https://powerdevbox.com/subs/agent generator.html">https://powerdevbox.com/subs/agent generator.htm</a></p>
+  	</body>
+  </html>
