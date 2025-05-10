@@ -1,218 +1,231 @@
 <!doctype html>
 <html lang="en">
+
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="shortcut icon" href="favicon.png">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="shortcut icon" href="favicon.png">
 
-  <meta name="description" content="Developer Tools for Power Platform" />
-  <meta name="keywords" content="power automate, power apps, power platform, flows, low code, wyattdave,autoreview,appreview,flow utilizer"/>
+	<meta name="description" content="Developer Tools for Power Platform" />
+	<meta name="keywords"
+		content="power automate, power apps, power platform, flows, low code, wyattdave,autoreview,appreview,flow utilizer" />
 
-		<!-- Bootstrap CSS -->
-		<link href="css/bootstrap.min.css" rel="stylesheet">
-		<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-		<link href="css/tiny-slider.css" rel="stylesheet">
-		<link href="css/style.css" rel="stylesheet">
-		<style>
-			a {
-				max-width: 100%;
-				word-wrap: break-word;
-				overflow-wrap: break-word; 
-				display: inline-block;
-			}
-		</style>
-		<title>AutoReview </title>
-	</head>
+	<!-- Bootstrap CSS -->
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+	<link href="css/tiny-slider.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+	<style>
+		a {
+			max-width: 100%;
+			word-wrap: break-word;
+			overflow-wrap: break-word;
+			display: inline-block;
+		}
+	</style>
+	<title>Flow Utilizer </title>
+</head>
 
-	<body>
-		<!-- Start Header/Navigation -->
-		<nav class="custom-navbar navbar navbar navbar-expand-md navbar-dark bg-dark" arial-label="Power DevBox navigation bar">
+<body>
+	<!-- Start Header/Navigation -->
+	<nav class="custom-navbar navbar navbar navbar-expand-md navbar-dark bg-dark"
+		arial-label="Power DevBox navigation bar">
 
-			<div class="container">
-				<img src="images/power devbox grey.png" style="height:30px"/><a class="navbar-brand" href="index.html">Flow Utilizer<span>.</span></a>
-				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsFurni" aria-controls="navbarsFurni" aria-expanded="false" aria-label="Toggle navigation">
-					<span class="navbar-toggler-icon"></span>
-				</button>
+		<div class="container">
+			<img src="images/power devbox grey.png" style="height:30px" /><a class="navbar-brand" href="index.html">Flow
+				Utilizer<span>.</span></a>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsFurni"
+				aria-controls="navbarsFurni" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarsFurni">
 				<div class="collapse navbar-collapse" id="navbarsFurni">
-					<div class="collapse navbar-collapse" id="navbarsFurni">
-						<ul class="custom-navbar-nav navbar-nav ms-auto mb-2 mb-md-0">
-							<li>
-								<a class="nav-link" href="index.html">Home</a>
-							</li>
-							<li><a class="nav-link" href="autoreview.html">AutoReview</a></li>
-							<li><a class="nav-link" href="index.html#chrome-extensions">Chrome Extensions</a></li>					
-							<li class="nav-item active"><a class="nav-link" href="flow utilizer.html">Flow Utilizer</a></li>
-							<li><a class="nav-link" href="blog.html">Blog</a></li>
-						</ul>
-						<ul class="custom-navbar-cta navbar-nav mb-2 mb-md-0 ms-5">
-							<li><a class="nav-link" href="https://docs.powerdevbox.com/"> Docs/Guides</a></li>
-						</ul>
+					<ul class="custom-navbar-nav navbar-nav ms-auto mb-2 mb-md-0">
+						<li>
+							<a class="nav-link" href="index.html">Home</a>
+						</li>
+						<li><a class="nav-link" href="autoreview.html">AutoReview</a></li>
+						<li><a class="nav-link" href="index.html#chrome-extensions">Chrome Extensions</a></li>
+						<li class="nav-item active"><a class="nav-link" href="flow utilizer.html">Flow Utilizer</a></li>
+						<li><a class="nav-link" href="blog.html">Blog</a></li>
+					</ul>
+					<ul class="custom-navbar-cta navbar-nav mb-2 mb-md-0 ms-5">
+						<li><a class="nav-link" href="https://docs.powerdevbox.com/"> Docs/Guides</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+	</nav>
+	<!-- End Header/Navigation -->
+
+	<!-- Start Hero Section -->
+	<div class="hero">
+		<div class="container">
+			<div class="row justify-content-between">
+				<div class="col-lg-5">
+					<div class="intro-excerpt">
+						<h1>Flow Utilizer for Power Automate</h1>
+						<p class="mb-4">utilize your Power Automate licenses by using your daily API limits </p>
+
+					</div>
+				</div>
+				<div class="col-lg-7" style="max-width: 100%;overflow-x: hidden;">
+					<div class="hero-img-wrap">
+						<img src="images/flow utilizer 512.png" style="max-width: 300px; width:80%" class="img-fluid">
 					</div>
 				</div>
 			</div>
-				
-		</nav>
-		<!-- End Header/Navigation -->
+			<p>
 
-		<!-- Start Hero Section -->
-			<div class="hero">
-				<div class="container">
-					<div class="row justify-content-between">
-						<div class="col-lg-5">
-							<div class="intro-excerpt">
-								<h1>Flow Utilizer for Power Automate</h1>
-								<p class="mb-4">AutoReview is a automated code review tool for Power Automate. It extracts all key information from the flow, generates configurable scoreing review, and interact diagram. It is availble as Chromium extension, Windows App, Power Platform Connector, and API. </p>
-								
-							</div>
-						</div>
-						<div class="col-lg-7" style="max-width: 100%;overflow-x: hidden;">
-							<div class="hero-img-wrap">
-								<img src="images/flow utilizer 512.png" style="max-width: 300px; width:80%"  class="img-fluid">
-							</div>
-						</div>
-					</div>
+				<a href="https://flow.powerdevbox.com" class="btn btn-white-outline" target="_blank">Web App</a>
+
+			</p>
+		</div>
+	</div>
+	<!-- End Hero Section -->
+
+	<div class="why-choose-section">
+		<div class="container">
+			<div class="row justify-content-between">
+				<div class="col-lg-4">
+					<br>
+					<h2 class="section-title" id="web-app">Utilize Your Power Automate Licenses</h2>
 					<p>
-						
-						<a href="https://flow.powerdevbox.com"class="btn btn-white-outline" target="_blank">Web App</a>				
-						
+						Flow Utilizer is a tool that helps you to utilize your Power Automate licenses by estimating and
+						tracking API calls.
+					</p>
+					<p>Handling the complexity of loop iterations and conditional branching, spread across mulitple
+						flows ans solutions can be challenging, Flow Utilizer simplifes this for you. Key features
+						include:
+					<ul>
+						<li>Manual estimations</li>
+						<li>Import solution estimations</li>
+						<li>Save multiple solutions</li>
+						<li>License recommendation</li>
+						<li>Daily tracking</li>
+						<li>Export and import data in YAML formt</li>
+						<li>Visulaised data in charts</li>
+						<li>Mobile and Desktop optimized</li>
+					</ul>
+					</p>
+
+					<p>More information on limits can be found in Microsofts docs:<a
+							href="https://learn.microsoft.com/en-us/power-platform/admin/api-request-limits-allocations"
+							target="_blank">https://learn.microsoft.com/en-us/power-platform/admin/api-request-limits-allocations</a>
 					</p>
 				</div>
-			</div>
-		<!-- End Hero Section -->
-
-		<div class="why-choose-section">
-			<div class="container">
-				<div class="row justify-content-between">
-					<div class="col-lg-4">
-						<br>
-						<h2 class="section-title" id="chrome-extensions">Files</h2>
-						<p>
-							AutoReview can create 3 different files from your flow (html based that can be download and used independently).						
-						</p>
-						<p><b>Report:</b> the review extracts all key information from the flow including:
-							<ul>
-								<li>Variables</li>
-								<li>Actions</li>
-								<ul>
-									<li>Name</li>
-									<li>Inputs</li>
-									<li>Run After</li>
-									<li>Nesting</li>
-								</ul>
-								<li>Connector Details</li>
-								<li>Trigger Info</li>
-								<li>Exception Handling</li>
-								<li>Connections</li>
-							</ul>
-						</p>
-						<p><b>Review:</b> Includes all report information and scores for:
-							<ul>
-								<li>Action Count/Complexity</li>
-								<li>Variable Count</li>
-								<li>Compose Use</li>
-								<li>Connector Settings</li>
-							</ul>
-						</p>
-						<p><b>Diagram:</b> A interact visual reprenstation of the flow in SVG format</p>
-						<a href="https://autoreview.powerdevbox.com" target="_blank">https://autoreview.powerdevbox.com</a>
-						<a href="https://app.swaggerhub.com/apis/PowerDevBox/AutoReview/2.0.0" target="_blank">https://app.swaggerhub.com/apis/PowerDevBox/AutoReview/2.0.0</a>
-					</div>
-					<div class="col-lg-7" style="padding-top: 0px;">
-						<div>
-							<div class="row">
-								<div class="col-lg-7 mx-auto text-center">
-									<h2 class="section-title">Screenshots</h2>
+				<div class="col-lg-7" style="padding-top: 0px;">
+					<div>
+						<div class="row">
+							<div class="col-lg-7 mx-auto text-center">
+								<h2 class="section-title">Screenshots</h2>
+							</div>
+						</div>
+						<div class="row justify-content-center">
+							<div class="testimonial-slider-wrap text-center">
+								<div id="testimonial-nav" aria-label="Carousel Navigation" tabindex="0">
+									<span class="prev" data-controls="prev" aria-controls="tns1" tabindex="-1"><span
+											class="fa fa-chevron-left"></span></span>
+									<span class="next" data-controls="next" aria-controls="tns1" tabindex="-1"><span
+											class="fa fa-chevron-right"></span></span>
 								</div>
-							</div>					
-							<div class="row justify-content-center">
-								<div class="testimonial-slider-wrap text-center">	
-									<div id="testimonial-nav" aria-label="Carousel Navigation" tabindex="0">
-										<span class="prev" data-controls="prev" aria-controls="tns1" tabindex="-1"><span class="fa fa-chevron-left"></span></span>
-										<span class="next" data-controls="next" aria-controls="tns1" tabindex="-1"><span class="fa fa-chevron-right"></span></span>
+								<div class="tns-outer" id="tns1-ow">
+									<div class="tns-nav" aria-label="Carousel Pagination">
+										<button data-nav="0" aria-controls="tns1" style=""
+											aria-label="Carousel Page 1  (Current Slide)" class="tns-nav-active"
+											tabindex="-1"></button>
+										<button data-nav="1" aria-controls="tns1" style="" aria-label="Carousel Page 2"
+											class="" tabindex="-1"></button>
+										<button data-nav="2" aria-controls="tns1" style="" aria-label="Carousel Page 3"
+											class=""></button>
 									</div>
-									<div class="tns-outer" id="tns1-ow">
-										<div class="tns-nav" aria-label="Carousel Pagination">
-											<button data-nav="0" aria-controls="tns1" style="" aria-label="Carousel Page 1  (Current Slide)" class="tns-nav-active" tabindex="-1"></button>
-											<button data-nav="1" aria-controls="tns1" style="" aria-label="Carousel Page 2" class="" tabindex="-1"></button>
-											<button data-nav="2" aria-controls="tns1" style="" aria-label="Carousel Page 3" class=""></button>
-										</div>
-										<div class="tns-liveregion tns-visually-hidden" aria-live="polite" aria-atomic="true">
-											slide 
-											<span class="current">1</span>  of 3
-										</div>
-										<div id="tns1-mw" class="tns-ovh">
-											<div class="tns-inner" id="tns1-iw">
-												<div class="testimonial-slider  tns-slider tns-carousel tns-subpixel tns-calc tns-horizontal" id="tns1" style="transform: translate3d(-60%, 0px, 0px);">
-													<div class="item tns-item" id="tns1-item0"aria-hidden="true" tabindex="-1">
-														<div class="row justify-content-center">
-															<div class="col-lg-8 mx-auto">
-																<div class="testimonial-block text-center">
-																	<blockquote class="mb-5">
+									<div class="tns-liveregion tns-visually-hidden" aria-live="polite"
+										aria-atomic="true">
+										slide
+										<span class="current">1</span> of 3
+									</div>
+									<div id="tns1-mw" class="tns-ovh">
+										<div class="tns-inner" id="tns1-iw">
+											<div class="testimonial-slider  tns-slider tns-carousel tns-subpixel tns-calc tns-horizontal"
+												id="tns1" style="transform: translate3d(-60%, 0px, 0px);">
+												<div class="item tns-item" id="tns1-item0" aria-hidden="true"
+													tabindex="-1">
+													<div class="row justify-content-center">
+														<div class="col-lg-8 mx-auto">
+															<div class="testimonial-block text-center">
+																<blockquote class="mb-5">
 																	<p>Utilize Flow</p>
-																	</blockquote>
-																	<div class="author-info">
-																		
-																			<img src="images/Screenshots/utilizer 1.png" alt="Maria Jones" class="img-fluid">
-																		
-																	</div>
+																</blockquote>
+																<div class="author-info">
+
+																	<img src="images/Screenshots/utilizer 1.png"
+																		alt="Maria Jones" class="img-fluid">
+
 																</div>
 															</div>
 														</div>
 													</div>
-													<div class="item tns-item" id="tns1-item1" aria-hidden="true" tabindex="-1">
-														<div class="row justify-content-center">
-															<div class="col-lg-8 mx-auto">
-																<div class="testimonial-block text-center">
-																	<blockquote class="mb-5">
-																		<p>Solution Lists</p>
-																	</blockquote>
-		
-																	<div class="author-info">
-																		
-																			<img src="images/Screenshots/utilizer 2.png" alt="Maria Jones" class="img-fluid">
-																		
-																	</div>
+												</div>
+												<div class="item tns-item" id="tns1-item1" aria-hidden="true"
+													tabindex="-1">
+													<div class="row justify-content-center">
+														<div class="col-lg-8 mx-auto">
+															<div class="testimonial-block text-center">
+																<blockquote class="mb-5">
+																	<p>Solution Lists</p>
+																</blockquote>
+
+																<div class="author-info">
+
+																	<img src="images/Screenshots/utilizer 2.png"
+																		alt="Maria Jones" class="img-fluid">
+
 																</div>
 															</div>
 														</div>
-													</div> 									
-											<!-- END item -->
-		
-													<div class="item tns-item" id="tns1-item2" aria-hidden="true" tabindex="-1">
-														<div class="row justify-content-center">
-															<div class="col-lg-8 mx-auto">
-																<div class="testimonial-block text-center">
-																	<blockquote class="mb-5">
-																		<p>Charts</p>
-																	</blockquote>
-		
-																	<div class="author-info">
-																		
-																			<img src="images/Screenshots/utilizer 3.png" alt="Maria Jones" class="img-fluid">
-																		
-																	</div>
+													</div>
+												</div>
+												<!-- END item -->
+
+												<div class="item tns-item" id="tns1-item2" aria-hidden="true"
+													tabindex="-1">
+													<div class="row justify-content-center">
+														<div class="col-lg-8 mx-auto">
+															<div class="testimonial-block text-center">
+																<blockquote class="mb-5">
+																	<p>Charts</p>
+																</blockquote>
+
+																<div class="author-info">
+
+																	<img src="images/Screenshots/utilizer 3.png"
+																		alt="Maria Jones" class="img-fluid">
+
 																</div>
 															</div>
 														</div>
-													</div> 
-													<!-- END item -->
-														<div class="item tns-item" id="tns1-item2" aria-hidden="true" tabindex="-1">
-														<div class="row justify-content-center">
-															<div class="col-lg-8 mx-auto">
-																<div class="testimonial-block text-center">
-																	<blockquote class="mb-5">
-																		<p>YAML Exports</p>
-																	</blockquote>
-		
-																	<div class="author-info">
-																		
-																			<img src="images/Screenshots/utilizer 4.png" alt="Maria Jones" class="img-fluid">
-																		
-																	</div>
+													</div>
+												</div>
+												<!-- END item -->
+												<div class="item tns-item" id="tns1-item2" aria-hidden="true"
+													tabindex="-1">
+													<div class="row justify-content-center">
+														<div class="col-lg-8 mx-auto">
+															<div class="testimonial-block text-center">
+																<blockquote class="mb-5">
+																	<p>YAML Exports</p>
+																</blockquote>
+
+																<div class="author-info">
+
+																	<img src="images/Screenshots/utilizer 4.png"
+																		alt="Maria Jones" class="img-fluid">
+
 																</div>
 															</div>
 														</div>
-													</div> 													
+													</div>
 												</div>
 											</div>
 										</div>
@@ -224,8 +237,9 @@
 				</div>
 			</div>
 		</div>
+	</div>
 
-		<br>
+	<br>
 	<div class="why-choose-section">
 		<div class="container">
 			<div class="row justify-content-between">
@@ -236,57 +250,64 @@
 						<div class="col-6 col-md-6">
 							<div class="feature">
 								<div class="icon">
-									<a href="https://docs.powerdevbox.com/autoreview/autoreview-chromium-extension"><img src="images/guide.png" class="icons" alt="Image" class="imf-fluid"></a>
+									<a href="https://docs.powerdevbox.com/flow-utilizer/flow-utilizer-start"><img
+											src="images/guide.png" class="icons" alt="Image" class="imf-fluid"></a>
 								</div>
-								<a href="https://docs.powerdevbox.com/autoreview/autoreview-chromium-extension"><h3>Guide</h3></a>
-								<p>Guide to use AutoReview</p>
+								<a href="https://docs.powerdevbox.com/flow-utilizer/flow-utilizer-start">
+									<h3>Guide</h3>
+								</a>
+								<p>Guide to use Flow Utilizer</p>
 							</div>
 						</div>
 
 						<div class="col-6 col-md-6">
 							<div class="feature">
 								<div class="icon">
-									<a href="autoreview log.html"><img src="images/change.png" class="icons" alt="Image" class="imf-fluid"></a>
+									<a href="flow utilizer log.html"><img src="images/change.png" class="icons"
+											alt="Image" class="imf-fluid"></a>
 								</div>
-								<a href="autoreview log.html"><h3>Change Log</h3></a>
+								<a href="flow utilizer log.html">
+									<h3>Change Log</h3>
+								</a>
 								<p>List of all updates</p>
 							</div>
-						</div>	
-						
+						</div>
+
 						<div class="col-6 col-md-6">
 							<div class="feature">
 								<div class="icon">
-									<a href="assets/Config.zip" download><img src="images/config.png" class="icons" alt="Image" class="imf-fluid"></a>
+									<a href="assets/flow utilizer schema.yaml" target="_blank"><img
+											src="images/schema.png" class="icons" alt="Image" class="imf-fluid"></a>
 								</div>
-								<a href="assets/Config.zip" download><h3>Configs</h3></a>
-								<p>Download config files to update your AutoReview</p>
+								<a href="api\PowerDevBox-AutoReview-2.0.0.json" target="_blank">
+									<h3>Schema</h3>
+								</a>
+								<p>Schema of Flow Utilizer Solution output</p>
 							</div>
 						</div>
 						<div class="col-6 col-md-6">
 							<div class="feature">
 								<div class="icon">
-									<a href="api\PowerDevBox-AutoReview-2.0.0.json" target="_blank"><img src="images/schema.png" class="icons" alt="Image" class="imf-fluid"></a>
+									<a href="ahttps://learn.microsoft.com/en-us/power-platform/admin/api-request-limits-allocations#licensed-user-request-limits" target="_blank"><img
+											src="images/microsoft.png" class="icons" alt="Image" class="imf-fluid"></a>
 								</div>
-								<a href="api\PowerDevBox-AutoReview-2.0.0.json" target="_blank"><h3>Schema</h3></a>
-								<p>Schema of AutoReview Data output</p>
+								<a href="https://learn.microsoft.com/en-us/power-platform/admin/api-request-limits-allocations#licensed-user-request-limits" target="_blank">
+									<h3>MS Docs</h3>
+								</a>
+								<p>Flow API Limits</p>
 							</div>
 						</div>
 						<div class="col-6 col-md-6">
 							<div class="feature">
-								<div class="icon">
-									<a href="assets/AutoReviewDemo_2_0_0_1.zip" download><img src="images/zip.png" class="icons" alt="Image" class="imf-fluid"></a>
-								</div>
-								<a href="assets/AutoReviewDemo_2_0_0_1.zip" download><h3>Demo Flow</h3></a>
-								<p>Download solution with Demo AutoReview</p>
 							</div>
 						</div>
 						<div class="col-6 col-md-6">
 							<div class="feature">
-								</div>
+							</div>
 						</div>
 					</div>
 				</div>
-				
+
 				<div class="col-lg-6" style="padding-top: 50px;">
 					<div class="img-wrap">
 						<img src="images/flow utilizer.gif" style="max-width: 1000px; width:100%" class="img-fluid">
@@ -296,91 +317,99 @@
 		</div>
 	</div>
 	<!-- End Why Choose Us Section -->
-		
 
-<!-- Start Footer Section -->
-<footer class="footer-section">
-	<div class="container relative">
 
-		<div class="row g-4 mb-4">
-			<div class="col-lg-4">
-				<div class="mb-4 footer-logo-wrap"><a href="#" class="footer-logo">About us<span>.</span></a></div>
-				<p class="mb-4">We are not for profit and all of our tools are available for free. Certain services may have limited availability. We endeaver to expand availability when possible. All support tickets are again limited by current resources, please still share bugs and we will rectify as soon as possible (though please be patient)</p>
-				<ul class="list-unstyled custom-social">
-					<li><a href="https://www.linkedin.com/in/wyattdave/"><span class="fa fa-brands fa-linkedin"></span></a></li>
-					<li><a href="https://x.com/wyattdavedev"><span class="fa fa-brands fa-twitter"></span></a></li>
-					<li><a href="https://github.com/wyattdave"><span class="fa fa-brands fa-github"></span></a></li>
-					<li><a href="https://dev.to/feed/wyattdave"><span class="fa fa-rss-square"></span></a></li>							
-				</ul>
-			</div>
-			<div class="col-lg-8">
-				<div class="row links-wrap">
-					<div class="col-6 col-sm-6 col-md-3">
-						<ul class="list-unstyled">
-							<li><a href="https://buymeacoffee.com/wyattdave"><i class="fa fa-coffee" aria-hidden="true"></i> Buy me a Coffee</a></li>
-						</ul>
-					</div>										
-					<div class="col-6 col-sm-6 col-md-3">
-						<ul class="list-unstyled">
-							<li><a href="Roadmap.html">Roadmap</a></li>
-						</ul>
-					</div>
-					<div class="col-6 col-sm-6 col-md-3">
-						<ul class="list-unstyled">
-							<li><a href="merch.html" target="_blank">Merch</a></li>
-						</ul>
-					</div>
-					<div class="col-6 col-sm-6 col-md-3">
-						<ul class="list-unstyled">
-							<li><a href="https://dev.to/wyattdave">Blog -Dev.to</a></li>									
-						</ul>
-					</div>						
-					<div class="col-6 col-sm-6 col-md-3">
-						<ul class="list-unstyled">
-							<li><a href="privacy.html">Privacy</a></li>									
-						</ul>
-					</div>				
-					<div class="col-6 col-sm-6 col-md-3">
-						<ul class="list-unstyled">
-							<li><a href="terms&conditions.html">Terms & Conditions</a></li>
-						</ul>
-					</div>
-					<div class="col-6 col-sm-6 col-md-3">
-						<ul class="list-unstyled">
-							<li><a href="contact.html">Contact us</a></li>
-						</ul>
-					</div>	
-					<div class="col-6 col-sm-6 col-md-3">
-						<ul class="list-unstyled">
-							<li><a href="#"></a></li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="border-top copyright">
-			<div class="row pt-4">
-				<div class="col-lg-6">
-					<p class="mb-2 text-center text-lg-start">Copyright &copy;<script>document.write(new Date().getFullYear());</script>. All Rights Reserved. &mdash; Designed with love by <a href="https://untree.co">Untree.co</a>  <!-- License information: https://untree.co/license/ -->
-						</p>
-				</div>
-				<div class="col-lg-6 text-center text-lg-end">
-					<ul class="list-unstyled d-inline-flex ms-auto">
-						<li class="me-4">WyattDave</li>
-						<li class="me-4">WyattDaveDev</li>
-						<li class="me-4">LowCodeDev</li>
+	<!-- Start Footer Section -->
+	<footer class="footer-section">
+		<div class="container relative">
+
+			<div class="row g-4 mb-4">
+				<div class="col-lg-4">
+					<div class="mb-4 footer-logo-wrap"><a href="#" class="footer-logo">About us<span>.</span></a></div>
+					<p class="mb-4">We are not for profit and all of our tools are available for free. Certain services
+						may have limited availability. We endeaver to expand availability when possible. All support
+						tickets are again limited by current resources, please still share bugs and we will rectify as
+						soon as possible (though please be patient)</p>
+					<ul class="list-unstyled custom-social">
+						<li><a href="https://www.linkedin.com/in/wyattdave/"><span
+									class="fa fa-brands fa-linkedin"></span></a></li>
+						<li><a href="https://x.com/wyattdavedev"><span class="fa fa-brands fa-twitter"></span></a></li>
+						<li><a href="https://github.com/wyattdave"><span class="fa fa-brands fa-github"></span></a></li>
+						<li><a href="https://dev.to/feed/wyattdave"><span class="fa fa-rss-square"></span></a></li>
 					</ul>
 				</div>
+				<div class="col-lg-8">
+					<div class="row links-wrap">
+						<div class="col-6 col-sm-6 col-md-3">
+							<ul class="list-unstyled">
+								<li><a href="https://buymeacoffee.com/wyattdave"><i class="fa fa-coffee"
+											aria-hidden="true"></i> Buy me a Coffee</a></li>
+							</ul>
+						</div>
+						<div class="col-6 col-sm-6 col-md-3">
+							<ul class="list-unstyled">
+								<li><a href="Roadmap.html">Roadmap</a></li>
+							</ul>
+						</div>
+						<div class="col-6 col-sm-6 col-md-3">
+							<ul class="list-unstyled">
+								<li><a href="merch.html" target="_blank">Merch</a></li>
+							</ul>
+						</div>
+						<div class="col-6 col-sm-6 col-md-3">
+							<ul class="list-unstyled">
+								<li><a href="https://dev.to/wyattdave">Blog -Dev.to</a></li>
+							</ul>
+						</div>
+						<div class="col-6 col-sm-6 col-md-3">
+							<ul class="list-unstyled">
+								<li><a href="privacy.html">Privacy</a></li>
+							</ul>
+						</div>
+						<div class="col-6 col-sm-6 col-md-3">
+							<ul class="list-unstyled">
+								<li><a href="terms&conditions.html">Terms & Conditions</a></li>
+							</ul>
+						</div>
+						<div class="col-6 col-sm-6 col-md-3">
+							<ul class="list-unstyled">
+								<li><a href="contact.html">Contact us</a></li>
+							</ul>
+						</div>
+						<div class="col-6 col-sm-6 col-md-3">
+							<ul class="list-unstyled">
+								<li><a href="#"></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="border-top copyright">
+				<div class="row pt-4">
+					<div class="col-lg-6">
+						<p class="mb-2 text-center text-lg-start">Copyright &copy;
+							<script>document.write(new Date().getFullYear());</script>. All Rights Reserved. &mdash;
+							Designed with love by <a href="https://untree.co">Untree.co</a>
+							<!-- License information: https://untree.co/license/ -->
+						</p>
+					</div>
+					<div class="col-lg-6 text-center text-lg-end">
+						<ul class="list-unstyled d-inline-flex ms-auto">
+							<li class="me-4">WyattDave</li>
+							<li class="me-4">WyattDaveDev</li>
+							<li class="me-4">LowCodeDev</li>
+						</ul>
+					</div>
+				</div>
 			</div>
 		</div>
-	</div>
-</footer>
-<!-- End Footer Section -->	
+	</footer>
+	<!-- End Footer Section -->
 
 
-		<script src="js/bootstrap.bundle.min.js"></script>
-		<script src="js/tiny-slider.js"></script>
-		<script src="js/custom.js"></script>
-	</body>
+	<script src="js/bootstrap.bundle.min.js"></script>
+	<script src="js/tiny-slider.js"></script>
+	<script src="js/custom.js"></script>
+</body>
 
 </html>
